@@ -1,0 +1,150 @@
+.header {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  background-color: white;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 0 1rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  width: 360px;
+}
+
+.desktopNav {
+  display: none;
+}
+
+.navLink {
+  color: var(--gold);
+  font-size: 15px;
+  transition: color 0.2s;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: 500;
+}
+
+.navLink:hover,
+.navLink.active {
+  border-bottom: 2px solid var(--gold);
+}
+
+.searchButton {
+  color: #666;
+  transition: color 0.2s;
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.searchButton:hover {
+  color: var(--gold);
+}
+
+.searchIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.mobileMenuButton {
+  display: block;
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+  position: relative;
+  z-index: 1001;
+}
+
+.menuIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #666;
+}
+
+.mobileNav {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 80%;
+  height: 100vh;
+  background-color: white;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  transition: right 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.mobileNav.isOpen {
+  right: 0;
+}
+
+.mobileNavInner {
+  padding: 80px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mobileNavLink {
+  font-size: 1.2rem;
+  color: #333;
+  text-decoration: none;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.overlayVisible {
+  display: block;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+  .header {
+    padding: 1rem 2rem;
+  }
+
+  .container {
+    padding: 0;
+  }
+
+  .desktopNav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .navLink {
+    font-size: 15px;
+    margin: 0 1rem;
+  }
+
+  .mobileMenuButton {
+    display: none;
+  }
+
+  .mobileNav {
+    display: none;
+  }
+} 
