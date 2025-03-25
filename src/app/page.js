@@ -43,17 +43,17 @@ export default function Home() {
               </div>
               <div className={styles.buttons}>
                 <Link href="/servicios">
-                  <button className={styles.button} prefetch={true}>SERVICIOS</button>
+                  <button className={styles.button}>SERVICIOS</button>
                 </Link>
                 <Link href="/contacto">
-                  <button className={styles.button} prefetch={true}>CONTACTO</button>
+                  <button className={styles.button}>CONTACTO</button>
                 </Link>
               </div>
             </blockquote>
           </div>
           <Image
             className={styles.profileImage}
-            src="https://dramileidyfdzribot.com/wp-content/uploads/2024/11/dra_escritora-681x1024.jpg"
+            src="/dra_escritora.jpg"
             alt="Dra. Mileidy Fernández Ribot"
             width={500}
             height={600}
@@ -88,7 +88,7 @@ export default function Home() {
           <div className={styles.servicesList}>
             <div className={styles.serviceImage}>
               <Image
-                src="https://dramileidyfdzribot.com/wp-content/uploads/2024/08/servicios-inicio-1.jpg"
+                src="/services.jpg"
                 alt="Servicios de medicina estética"
                 width={300}
                 height={380}
