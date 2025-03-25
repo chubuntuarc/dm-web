@@ -4,10 +4,19 @@ import Diamond from "../components/diamond";
 import QuoteLeft from "../components/quote_left";
 import QuoteRight from "../components/quote_right";
 import Link from "next/link";
+import Head from "next/head";
 
 export default function Home() {
   return (
     <div className={styles.page}>
+      <Head>
+        <link rel="preconnect" href="https://www.youtube.com" />
+        <link rel="preconnect" href="https://www.youtube-nocookie.com" />
+        <link rel="preconnect" href="https://i.ytimg.com" />
+        <link rel="dns-prefetch" href="https://www.youtube.com" />
+        <link rel="dns-prefetch" href="https://www.youtube-nocookie.com" />
+        <link rel="dns-prefetch" href="https://i.ytimg.com" />
+      </Head>
       <main className={styles.main}>
         <div className={styles.header}>
           <div className={styles.headerContent}>
@@ -34,10 +43,10 @@ export default function Home() {
               </div>
               <div className={styles.buttons}>
                 <Link href="/servicios">
-                  <button className={styles.button}>SERVICIOS</button>
+                  <button className={styles.button} prefetch={true}>SERVICIOS</button>
                 </Link>
                 <Link href="/contacto">
-                  <button className={styles.button}>CONTACTO</button>
+                  <button className={styles.button} prefetch={true}>CONTACTO</button>
                 </Link>
               </div>
             </blockquote>
@@ -49,6 +58,8 @@ export default function Home() {
             width={500}
             height={600}
             priority
+            loading="eager"
+            fetchPriority="high"
           />
         </div>
         <div className={styles.videoContainer}>
