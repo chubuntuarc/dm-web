@@ -21,7 +21,7 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-        <Link href="/logo.png" className={styles.logo}>
+        <Link href="/" className={styles.logo}>
           <Image
             src="/logo.png" // Make sure to add your logo to the public folder
             alt="Dra. Mileidy Fernandez Ribot"

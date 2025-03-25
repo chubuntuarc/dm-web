@@ -7,13 +7,13 @@
   --button-secondary-hover: #f2f2f2;
 
   display: grid;
-  grid-template-rows: 20px 1fr 20px;
+  grid-template-rows: 0 1fr;
   align-items: center;
   justify-items: center;
   min-height: 100svh;
-  padding: 80px;
   gap: 64px;
   font-family: var(--font-geist-sans);
+  background: linear-gradient(to bottom, #ffffff, #F5F0E5);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -30,7 +30,6 @@
 .main {
   display: flex;
   flex-direction: column;
-  gap: 32px;
   grid-row-start: 2;
 }
 
@@ -164,5 +163,173 @@ a.secondary {
 @media (prefers-color-scheme: dark) {
   .logo {
     filter: invert();
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.headerContent {
+  flex: 1;
+  max-width: 600px;
+  text-align: center;
+}
+
+.headerContent h1 {
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
+  color: #C6A052;
+  font-weight: 100;
+  line-height: 1.2;
+}
+
+.headerContent h2 {
+  font-size: 1.25rem;
+  color: #C6A052;
+  margin-bottom: 2rem;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.diamond {
+  color: #C6A052;
+  font-size: 2.5rem;
+  margin: 2rem 0;
+  text-align: center;
+  display: block;
+}
+
+.headerContent blockquote {
+  font-style: italic;
+  margin: 2rem 0;
+  padding: 2rem;
+  border-radius: 8px;
+  position: relative;
+  text-align: center;
+}
+
+/* Update the quote SVG positioning */
+.quoteLeft {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  opacity: 0.3;
+}
+
+.quoteRight {
+  position: absolute;
+  right: 20px;
+  bottom: 160px;
+  opacity: 0.3;
+}
+
+.headerContent blockquote p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #666;
+  font-style: italic;
+  margin: 0;
+}
+
+.headerContent blockquote footer {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.buttons {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 3rem;
+  justify-content: center;
+}
+
+.button {
+  padding: 1rem 2.5rem;
+  background-color: #F0D3AE;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.button:hover {
+  background-color: #e6c196;
+  transform: translateY(-2px);
+}
+
+.profileImage {
+  width: 450px;
+  height: auto;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+@media (max-width: 1024px) {
+  .header {
+    padding: 3rem 2rem;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .headerContent {
+    max-width: 100%;
+    order: 1;
+  }
+
+  .headerContent h1 {
+    font-size: 2.5rem;
+  }
+
+  .buttons {
+    justify-content: center;
+  }
+
+  .profileImage {
+    width: 100%;
+    max-width: 350px;
+    margin-bottom: 2rem;
+    order: 2;
+  }
+
+  .headerContent blockquote {
+    order: 3;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    padding: 2rem 1rem;
+  }
+
+  .headerContent h1 {
+    font-size: 2rem;
+  }
+
+  .headerContent h2 {
+    font-size: 1rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .button {
+    width: 100%;
   }
 }
