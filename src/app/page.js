@@ -51,6 +51,20 @@ export default function Home() {
             priority
           />
         </div>
+        <div className={styles.videoContainer}>
+          <h2 className={styles.videoTitle}>Semblanza de la Dra. <br /> Mileidy Fernández Ribot</h2>
+          <div className={styles.videoWrapper}>
+            <iframe
+              className={styles.video}
+              src="https://www.youtube.com/embed/fgsJh2w7x2A"
+              title="Semblanza de la Dra. Mileidy Fernández Ribot"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              width="100%"
+              height="400px"
+            ></iframe>
+          </div>
+        </div>
       </main>
     </div>
   );
