@@ -4,10 +4,34 @@ import styles from "./path.module.css";
 import Title_Banner from "../../components/Title_Banner";
 import { useState } from "react";
 import Diamond from "../../components/diamond";
+import Slider from "../../components/slider";
 
 export default function Trayectoria() {
   const [activeTab, setActiveTab] = useState("Trayectoria");
   const [activeTitle, setActiveTitle] = useState("Trayectoria");
+  const slides = [
+    {
+      id: 1,
+      image: "/slide_one.jpg",
+      title: "Empleada",
+      description:
+        "Me gradué de médico especialista y trabajé como empleada en el hospital principal del estado de Cienfuegos, Cuba como empleada por 13 años.",
+    },
+    {
+      id: 2,
+      image: "/slide_two.jpg",
+      title: "Autoempleada",
+      description:
+        "Luego de llegar a México en el año 2008 Comienzo apoyando a otros anestesiólogos mientras validaba mis títulos profesionales, entonces comenzaba mi caminar en la medicina privada, estaba feliz porque estaba aprendiendo una forma diferente de ejercer profesionalmente.",
+    },
+    {
+      id: 3,
+      image: "/slide_three.jpg",
+      title: "Emprendedora",
+      description:
+        "Mientras esperaba la validación de mi título de Anestesiología para tener mi cédula profesional, me fui a México a la UNAM, a estudiar un Diplomado en Medicina Estética, me gustó tanto lo que estaba aprendiendo que dije: quiero hacer eso, terminando en noviembre del año 2009 pongo un consultorio médico.",
+    },
+  ];
 
   const tabsData = [
     {
@@ -136,6 +160,7 @@ Tiene mucho que ver con nuestro autoconcepto, autoestima y amor propio.`,
                   </div>
                 </div>
               </div>
+              <Slider slides={slides} />
             </div>
           )}
           

@@ -1,0 +1,219 @@
+.slider-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  height: 500px;
+  position: relative;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.5s ease;
+}
+
+.slide-image-container {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.slide-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.slide-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.slide-description {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.slider-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.slider-arrow {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 18px;
+  margin: 0 10px;
+}
+
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  margin: 0 20px;
+}
+
+.slider-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ccc;
+  margin: 0 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.slider-dot.active {
+  background: #333;
+}
+
+.sliderContainer {
+  position: relative;
+  width: 100%;
+  overflow: visible;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.slider {
+  display: flex;
+  position: relative;
+  height: auto;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide {
+  position: relative;
+  flex: 0 0 calc(33.333% - 20px);
+  min-width: 280px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  transform: scale(0.85);
+  opacity: 0.5;
+}
+
+.slide.active {
+  transform: scale(1);
+  z-index: 10;
+  opacity: 1;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .slide {
+    flex: 0 0 100%;
+  }
+  
+  .slider {
+    gap: 15px;
+  }
+}
+
+.slideImageContainer {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.slideImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 4 / 3;
+}
+
+.slide.active .slideImage {
+  aspect-ratio: 4 / 3;
+}
+
+.slideContent {
+  padding: 0;
+  text-align: center;
+}
+
+.slideTitle {
+  margin: 0 0 0.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.slideDescription {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #333;
+  text-align: left;
+}
+
+.sliderControls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.sliderArrow {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1.5rem;
+  margin: 0 1rem;
+}
+
+.sliderDots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sliderDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ccc;
+  margin: 0 5px;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.sliderDot.active {
+  background: #333;
+}
