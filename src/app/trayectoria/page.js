@@ -3,6 +3,7 @@ import React from "react";
 import styles from "./path.module.css";
 import Title_Banner from "../../components/Title_Banner";
 import { useState } from "react";
+import Diamond from "../../components/diamond";
 
 export default function Trayectoria() {
   const [activeTab, setActiveTab] = useState("Trayectoria");
@@ -55,7 +56,7 @@ Coautora de los libros Ser mujer es fascinante, año 2022 y la historia de 100 m
 
       Sin embargo, a lo largo de la vida vamos construyendo un personaje, mismo que puede verse influenciado por los padres, familiares, maestros, amigos, medios de comunicación, influencers de moda etc.
 
-      Puede suceder que ese “personaje” que vamos construyendo no está alineado a lo que pensamos, sentimos, decimos o hacemos, y no nos apoya para lograr el propósito de vida.
+      Puede suceder que ese "personaje" que vamos construyendo no está alineado a lo que pensamos, sentimos, decimos o hacemos, y no nos apoya para lograr el propósito de vida.
 
 Tiene mucho que ver con nuestro autoconcepto, autoestima y amor propio.`,
       image: "/dra_path_esc.jpg",
@@ -95,6 +96,70 @@ Tiene mucho que ver con nuestro autoconcepto, autoestima y amor propio.`,
               </div>
             )
           ))}
+          
+          {/* Additional content specific to each tab */}
+          {activeTab === "Trayectoria" && (
+            <div className={styles.pathAdditionalContent}>
+              <img src="/trayectoria.jpg" alt="Experiencia Profesional" />
+              
+              <div className={styles.careerSteps}>
+                <div className={styles.careerStep}>
+                  <div className={styles.diamondIcon}>
+                    <Diamond />
+                  </div>
+                  <div className={styles.stepText}>
+                    <p>Ser empleado debía ser una preparación, para luego ser autoempleada o emprendedora.</p>
+                  </div>
+                </div>
+                <div className={styles.careerStep}>
+                  <div className={styles.diamondIcon}>
+                    <Diamond />
+                  </div>
+                  <div className={styles.stepText}>
+                    <p>Ser auto empleada o emprendedora debería ser una preparación para volverte empresaria.</p>
+                  </div>
+                </div>
+                <div className={styles.careerStep}>
+                  <div className={styles.diamondIcon}>
+                    <Diamond />
+                  </div>
+                  <div className={styles.stepText}>
+                    <p>Y ser empresaria debe llevarte a ser inversionista.</p>
+                  </div>
+                </div>
+                <div className={styles.careerStep}>
+                  <div className={styles.diamondIcon}>
+                    <Diamond />
+                  </div>
+                  <div className={styles.stepText}>
+                    <p>Ser inversionista debe llevarte a la libertad financiera.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+          
+          {activeTab === "MedicoEstetico" && (
+            <div className={styles.additionalContent}>
+              <h3>Especialidades</h3>
+              <img src="/dra_path_med.png" alt="Especialidades" />
+              <p>Tratamientos faciales, corporales y procedimientos no invasivos.</p>
+            </div>
+          )}
+          
+          {activeTab === "Empresaria" && (
+            <div className={styles.additionalContent}>
+              <h3>Logros Empresariales</h3>
+              <p>Fundadora de múltiples clínicas y centros de estética en México.</p>
+            </div>
+          )}
+          
+          {activeTab === "Escritora" && (
+            <div className={styles.additionalContent}>
+              <h3>Publicaciones</h3>
+              <p>Autora de "El arte de pulir un diamante" y coautora de otros libros de desarrollo personal.</p>
+            </div>
+          )}
         </div>
       </div>
     </div>

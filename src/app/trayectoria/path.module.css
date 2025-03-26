@@ -98,3 +98,72 @@
     max-width: 100%;
   }
 }
+
+.pathAdditionalContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.pathAdditionalContent img {
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+}
+
+.careerSteps {
+  padding: 30px 40px 30px 60px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.stepText {
+  background-color: #FFF4E7;
+  padding: 30px 40px 30px 60px;
+  border-radius: 0;
+  position: relative;
+  width: 100%;
+}
+
+.careerStep:first-child .stepText {
+  border-radius: 8px 8px 0 0;
+}
+
+.careerStep:last-child .stepText {
+  border-radius: 0 0 8px 8px;
+}
+
+.careerStep {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+}
+
+.diamondIcon {
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .careerSteps {
+    padding: 30px 20px 20px 40px;
+    margin: 30px 20px;
+  }
+  
+  .diamond {
+    width: 50px;
+    height: 55px;
+    left: -25px;
+  }
+}
