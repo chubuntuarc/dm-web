@@ -5,6 +5,7 @@ import QuoteLeft from "../components/quote_left";
 import QuoteRight from "../components/quote_right";
 import Link from "next/link";
 import Head from "next/head";
+import VideoSection from "../components/VideoSection";
 
 export default function Home() {
   return (
@@ -62,22 +63,15 @@ export default function Home() {
             fetchPriority="high"
           />
         </div>
-        <div className={styles.videoContainer}>
-          <h2 className={styles.videoTitle}>
-            Semblanza de la Dra. <br /> Mileidy Fernández Ribot
-          </h2>
-          <div className={styles.videoWrapper}>
-            <iframe
-              className={styles.video}
-              src="https://www.youtube.com/embed/fgsJh2w7x2A"
-              title="Semblanza de la Dra. Mileidy Fernández Ribot"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              width="100%"
-              height="400px"
-            ></iframe>
-          </div>
-        </div>
+        
+        <VideoSection 
+          title="Semblanza de la Dra. Mileidy Fernández Ribot"
+          videoId="fgsJh2w7x2A"
+          videoTitle="Semblanza de la Dra. Mileidy Fernández Ribot"
+          backgroundColor="#FFF9F0"
+          titleColor="#333"
+        />
+        
         <div className={styles.services}>
           <h2>Nuestros Servicios</h2>
           <p className={styles.servicesIntro}>
