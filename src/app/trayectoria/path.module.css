@@ -112,6 +112,68 @@
   height: auto;
 }
 
+.businessAdditionalContent {
+  background-color: var(--cream);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 2rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+.medicalAdditionalContent {
+  background-color: var(--cream);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 2rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+.credentialsContainer {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.credentialsText {
+  flex: 1.5;
+}
+
+.credentialsText p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.credentialsText strong {
+  font-weight: 600;
+}
+
+.credentialsImage {
+  flex: 1;
+  max-width: 350px;
+}
+
+.credentialsImage img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .credentialsContainer {
+    flex-direction: column;
+  }
+  
+  .credentialsImage {
+    max-width: 100%;
+    margin-top: 1rem;
+  }
+}
+
 .careerSteps {
   padding: 30px 40px 30px 60px;
   border-radius: 8px;

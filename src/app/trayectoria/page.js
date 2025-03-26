@@ -95,7 +95,9 @@ Tiene mucho que ver con nuestro autoconcepto, autoestima y amor propio.`,
           {tabsData.map((tab) => (
             <button
               key={tab.id}
-              className={`${styles.tabButton} ${activeTab === tab.id ? styles.activeTab : ""}`}
+              className={`${styles.tabButton} ${
+                activeTab === tab.id ? styles.activeTab : ""
+              }`}
               onClick={() => {
                 setActiveTab(tab.id);
                 setActiveTitle(tab.title);
@@ -105,34 +107,44 @@ Tiene mucho que ver con nuestro autoconcepto, autoestima y amor propio.`,
             </button>
           ))}
         </div>
-        
+
         <div className={styles.tabContent}>
-          {tabsData.map((tab) => (
-            activeTab === tab.id && (
-              <div key={tab.id} className={styles.contentWrapper}>
-                <div className={styles.imageContainer}>
-                  <img src={tab.image} alt={tab.title} className={styles.tabImage} />
+          {tabsData.map(
+            (tab) =>
+              activeTab === tab.id && (
+                <div key={tab.id} className={styles.contentWrapper}>
+                  <div className={styles.imageContainer}>
+                    <img
+                      src={tab.image}
+                      alt={tab.title}
+                      className={styles.tabImage}
+                    />
+                  </div>
+                  <div className={styles.textContainer}>
+                    <h2 className={styles.contentHeading}>{tab.heading}</h2>
+                    <p className={styles.contentDescription}>
+                      {tab.description}
+                    </p>
+                  </div>
                 </div>
-                <div className={styles.textContainer}>
-                  <h2 className={styles.contentHeading}>{tab.heading}</h2>
-                  <p className={styles.contentDescription}>{tab.description}</p>
-                </div>
-              </div>
-            )
-          ))}
-          
+              )
+          )}
+
           {/* Additional content specific to each tab */}
           {activeTab === "Trayectoria" && (
             <div className={styles.pathAdditionalContent}>
               <img src="/trayectoria.jpg" alt="Experiencia Profesional" />
-              
+
               <div className={styles.careerSteps}>
                 <div className={styles.careerStep}>
                   <div className={styles.diamondIcon}>
                     <Diamond />
                   </div>
                   <div className={styles.stepText}>
-                    <p>Ser empleado debía ser una preparación, para luego ser autoempleada o emprendedora.</p>
+                    <p>
+                      Ser empleado debía ser una preparación, para luego ser
+                      autoempleada o emprendedora.
+                    </p>
                   </div>
                 </div>
                 <div className={styles.careerStep}>
@@ -140,7 +152,10 @@ Tiene mucho que ver con nuestro autoconcepto, autoestima y amor propio.`,
                     <Diamond />
                   </div>
                   <div className={styles.stepText}>
-                    <p>Ser auto empleada o emprendedora debería ser una preparación para volverte empresaria.</p>
+                    <p>
+                      Ser auto empleada o emprendedora debería ser una
+                      preparación para volverte empresaria.
+                    </p>
                   </div>
                 </div>
                 <div className={styles.careerStep}>
@@ -156,33 +171,133 @@ Tiene mucho que ver con nuestro autoconcepto, autoestima y amor propio.`,
                     <Diamond />
                   </div>
                   <div className={styles.stepText}>
-                    <p>Ser inversionista debe llevarte a la libertad financiera.</p>
+                    <p>
+                      Ser inversionista debe llevarte a la libertad financiera.
+                    </p>
                   </div>
                 </div>
               </div>
               <Slider slides={slides} />
             </div>
           )}
-          
+
           {activeTab === "MedicoEstetico" && (
-            <div className={styles.additionalContent}>
+            <div className={styles.medicalAdditionalContent}>
+              <div className={styles.credentialsContainer}>
+                <div className={styles.credentialsText}>
+                  <p>
+                    <strong>Es miembro fundador y directora general</strong> de
+                    la empresa clínica GEN conformada por la Clínica Imagen Art
+                    y Farmacia Dermatológica Campestre.
+                  </p>
+
+                  <p>
+                    Ha sido acreedora de dos diplomados en el Tecnológico de
+                    Monterrey, Dirección Gerencial y Liderazgo.
+                  </p>
+
+                  <p>
+                    Cuenta además con una certificación internacional en
+                    liderazgo por Johnson Maxwell, también certificada en el
+                    arte de hablar en público por el doctor César Lozano.
+                  </p>
+
+                  <p>
+                    Finalizó un programa de capacitación en Monterrey titulado
+                    Empresarios de alto rendimiento.
+                  </p>
+
+                  <p>
+                    Actualmente miembro activo de Board Media una comunidad
+                    colaborativa de CEO'S de habla hispana.
+                  </p>
+                </div>
+                <div className={styles.credentialsImage}>
+                  <img src="/medical.png" alt="Doctora trabajando" />
+                </div>
+              </div>
+
               <h3>Especialidades</h3>
-              <img src="/dra_path_med.png" alt="Especialidades" />
-              <p>Tratamientos faciales, corporales y procedimientos no invasivos.</p>
+              <p>
+                Tratamientos faciales, corporales y procedimientos no invasivos.
+              </p>
             </div>
           )}
-          
+
           {activeTab === "Empresaria" && (
-            <div className={styles.additionalContent}>
-              <h3>Logros Empresariales</h3>
-              <p>Fundadora de múltiples clínicas y centros de estética en México.</p>
+            <div className={styles.businessAdditionalContent}>
+              <div className={styles.credentialsContainer}>
+                <div className={styles.credentialsText}>
+                  <p>
+                    Disfruta apoyar y participar activamente en las asociaciones
+                    civiles: Mujer fascinante y LA ROCA CC, agradecida con México
+                    que dice tener tatuado en su corazón.
+                  </p>
+                  
+                  <p>
+                    Elige aceptar el reto de ser la presidenta fundadora
+                    de una de las asociaciones más influyentes de México
+                    en cuanto a representación de mujeres empresarias,
+                    la Asociación Mexicana de Mujeres Jefas de
+                    Empresa Representación Tijuana, por sus siglas AMMJE.
+                  </p>
+                  
+                  <p>
+                    A un año y medio de haber tomado protesta como
+                    presidenta fundadora, marca un hito en la historia de
+                    esta asociación recibiendo la distinción Mención
+                    Honorífica a mejor representación. Dicho
+                    reconocimiento fue entregado a manos de la
+                    presidenta nacional durante el marco de la Cumbre
+                    BIT Leaders el 2 de noviembre de 2023.
+                  </p>
+                  
+                  <p>
+                    Su desempeño y compromiso dentro de la
+                    asociación en muy poco tiempo la llevaron a ser
+                    nombrada, el 19 de enero de 2024, Delegada de la
+                    Región Norte.
+                  </p>
+                  
+                  <p>
+                    Con la intención de continuar fortaleciendo AMMJE
+                    Representación Tijuana y a su vez apoyando en
+                    aperturar representaciones en Baja California acepta
+                    el reto de nuevamente ser elegida presidenta de
+                    representación.
+                  </p>
+                  
+                  <p>
+                    Su intención es aprender y aprender enseñando
+                    porque reconoce que todas podemos ser mentoras
+                    de alguien más.
+                  </p>
+                  
+                  <p>
+                    Su visión personal: Dignificar la práctica de la medicina
+                    estética en tanto apoya en la inclusión exitosa de la mujer en
+                    el mundo empresarial.
+                  </p>
+                </div>
+                <div className={styles.credentialsImage}>
+                  <img src="/empresaria.jpg" alt="Dra. Mileidy como empresaria" />
+                </div>
+              </div>
+
+              <h3>Reconocimientos</h3>
+              <p>
+                Acreedora de la Distinción Mujer líder en Baja California y reconocida por su labor empresarial en diversos medios.
+              </p>
             </div>
           )}
-          
+
           {activeTab === "Escritora" && (
             <div className={styles.additionalContent}>
               <h3>Publicaciones</h3>
-              <p>Autora de "El arte de pulir un diamante" y coautora de otros libros de desarrollo personal.</p>
+              <p>
+                Autora de "El arte de pulir un diamante" y coautora de otros
+                libros de desarrollo personal.
+              </p>
             </div>
           )}
         </div>
