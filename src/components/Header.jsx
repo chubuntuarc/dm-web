@@ -3,10 +3,12 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
+import { usePathname } from 'next/navigation';
 import styles from './header.module.css';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
   const menuItems = [
     { label: 'Inicio', href: '/' },
@@ -37,7 +39,7 @@ const Header = () => {
             <Link
               key={item.href}
               href={item.href}
-              className={styles.navLink}
+              className={`${styles.navLink} ${pathname === item.href ? styles.active : ''}`}
             >
               {item.label}
             </Link>
@@ -88,7 +90,7 @@ const Header = () => {
               <Link
                 key={item.href}
                 href={item.href}
-                className={styles.mobileNavLink}
+                className={`${styles.mobileNavLink} ${pathname === item.href ? styles.active : ''}`}
                 onClick={() => setIsOpen(false)}
               >
                 {item.label}

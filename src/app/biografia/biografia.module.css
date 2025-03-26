@@ -1,0 +1,216 @@
+.bio {
+  background: linear-gradient(to bottom, #ffffff, #FFF4E7);
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.bioContent {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.bioTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #000;
+}
+
+.bioSubtitle {
+  font-size: 1rem;
+  letter-spacing: 1px;
+  color: #333;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.bioIntro {
+  color: #333;
+  max-width: 900px;
+  margin: 0 auto 3rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.bioIntro p {
+  margin-bottom: 1rem;
+}
+
+.bioCards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.bioCard {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.bioCardImage {
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f8f8;
+}
+
+.bioCardImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.bioCard h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  color: #000;
+  text-align: center;
+}
+
+.section {
+  margin-bottom: 2.5rem;
+}
+
+.section h2 {
+  color: #333;
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 0.5rem;
+}
+
+.section ul {
+  list-style-type: disc;
+  padding-left: 2rem;
+}
+
+.section li {
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .bioTitle {
+    font-size: 2rem;
+  }
+  
+  .bioCards {
+    gap: 1rem;
+  }
+  
+  .bioCard {
+    width: 250px;
+  }
+}
+
+.highlight {
+  font-weight: bold;
+}
+
+.about {
+  padding: 4rem 2rem;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.sectionTitle {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  color: #333;
+  font-weight: 600;
+}
+
+.aboutContent {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.aboutContent p {
+  margin-bottom: 1.2rem;
+}
+
+.subTitle {
+  font-size: 1.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.vision {
+  background-color: #FFF4E7;
+  padding: 30px 40px 30px 60px;
+  border-radius: 8px;
+  position: relative;
+  margin: 30px 60px;
+}
+
+.diamondIcon {
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 65px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.visionText {
+  position: relative;
+}
+
+.visionTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333;
+  display: block;
+}
+
+.vision p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 3rem 1.5rem;
+  }
+  
+  .sectionTitle {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+  
+  .subTitle {
+    font-size: 1.3rem;
+    margin-top: 2rem;
+  }
+  
+  .aboutContent {
+    font-size: 0.95rem;
+  }
+}

@@ -1,0 +1,32 @@
+.container {
+  background-color: #FFF4E7;
+  padding: 1.5rem 0;
+  width: 100%;
+}
+
+.innerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.icon {
+  color: #333;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+}
+
+.title {
+  margin-left: 1rem;
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #333;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+}
