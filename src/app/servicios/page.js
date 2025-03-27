@@ -21,7 +21,7 @@ export default function Servicios() {
               Nuestra misión dentro de la Medicina Estética es ser tu mejor opción
               de acompañamiento en tu proceso de rejuvenecimiento.
             </p>
-            <a href="#" className={styles.serviceLink}>Ver más →</a>
+            <a href="/medicina" className={styles.serviceLink}>Ver más →</a>
             <div className={styles.serviceImageContainer}>
               <Image 
                 src="/harmony_medical.jpg" 
@@ -41,7 +41,7 @@ export default function Servicios() {
               eficacia en el mercado brindando así a nuestros clientes
               kits personalizados de skin care.
             </p>
-            <a href="#" className={styles.serviceLink}>Ver más →</a>
+            <a href="/dermatologia" className={styles.serviceLink}>Ver más →</a>
             <div className={styles.serviceImageContainer}>
               <Image 
                 src="/derma.png" 
