@@ -1,0 +1,268 @@
+.introContainer {
+  background-color: #fff;
+  color: #000;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  font-family: 'Arial', sans-serif;
+}
+
+.introText {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #333;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Values section styles */
+.valuesContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0;
+  padding: 0 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.valuesTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #000;
+  text-align: center;
+}
+
+.valuesList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.valueItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.valueIcon {
+  color: #d4af37;
+}
+
+/* About us section */
+.aboutContainer {
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.aboutImage {
+  width: 40%;
+  border-radius: 4px;
+  object-fit: cover;
+  max-height: 400px;
+}
+
+.aboutContent {
+  width: 60%;
+}
+
+.aboutTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #000;
+}
+
+.aboutText {
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Remove or simplify unused styles */
+.quoteContainer,
+.quote,
+.highlight,
+.author {
+  display: none;
+}
+
+.treatmentsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.treatmentCard {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  background-color: #fff;
+}
+
+.treatmentImage {
+  width: 40%;
+  object-fit: cover;
+}
+
+.treatmentContent {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 60%;
+}
+
+.treatmentTitle {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #222;
+}
+
+.treatmentIcon {
+  margin-right: 0.5rem;
+  color: #d4af37;
+}
+
+.treatmentDescription {
+  font-size: 0.85rem;
+  color: #555;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.viewMoreButton {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #f5e7c1;
+  color: #333;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  text-align: center;
+  font-weight: 500;
+  align-self: flex-start;
+  border: none;
+  cursor: pointer;
+}
+
+.viewMoreButton:hover {
+  background-color: #f0dca8;
+}
+
+/* Mission and Vision Section */
+.misionVisionContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 3rem 5%;
+  background-color: #fdf9f3;
+  margin: 2rem 0;
+}
+
+.misionContainer, .visionContainer {
+  flex: 1;
+  padding: 2rem;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.iconContainer {
+  margin-bottom: 1rem;
+}
+
+.misionContainer h2, .visionContainer h2 {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.misionContainer p, .visionContainer p {
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Kits Section */
+.kitsContainer {
+  padding: 4rem 5%;
+  background-color: #fff;
+}
+
+.kitsIntro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+}
+
+.kitsIntro h2 {
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.kitsIntro p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.kitsGallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.kitCard {
+  width: 300px;
+  padding: 1.5rem;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.kitCard:hover {
+  transform: translateY(-5px);
+}
+
+.kitCard h3 {
+  color: #333;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .misionVisionContainer {
+    flex-direction: column;
+  }
+  
+  .kitsGallery {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .kitCard {
+    width: 100%;
+    max-width: 300px;
+  }
+}
