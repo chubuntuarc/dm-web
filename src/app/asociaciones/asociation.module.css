@@ -1,0 +1,89 @@
+.container {
+  background-color: #fff;
+  color: #000;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.content {
+  width: 100%;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.associationsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.associationCard {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.associationCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.imageContainer {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.associationImage {
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.imageContainer:hover .associationImage {
+  transform: scale(1.05);
+}
+
+.associationCard h3 {
+  color: #333;
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+}
+
+.associationCard p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .associationsGrid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .imageContainer {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .associationsGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .container {
+    padding: 1rem;
+  }
+}
