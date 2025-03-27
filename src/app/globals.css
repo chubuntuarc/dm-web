@@ -3,6 +3,9 @@
   --foreground: #171717;
   --gold: #D6A96E;
   --cream: #FFF4E7;
+  --light-cream: #F0D9BA;
+  --dark-cream: #F0D3AE;
+  --black: #000000;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -1,11 +1,10 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import Diamond from "../components/diamond";
-import QuoteLeft from "../components/quote_left";
-import QuoteRight from "../components/quote_right";
-import Link from "next/link";
+
 import Head from "next/head";
 import VideoSection from "../components/VideoSection";
+import MainSection from "../components/MainSection";
 
 export default function Home() {
   return (
@@ -19,51 +18,7 @@ export default function Home() {
         <link rel="dns-prefetch" href="https://i.ytimg.com" />
       </Head>
       <main className={styles.main}>
-        <div className={styles.header}>
-          <div className={styles.headerContent}>
-            <h1>Dra. Mileidy</h1>
-            <h1>
-              <b>Fernández Ribot</b>
-            </h1>
-            <h2>MÉDICO ESTÉTICO | EMPRESARIA | ESCRITORA</h2>
-            <div className={styles.diamond}>
-              <Diamond />
-            </div>
-            <blockquote className={styles.quote}>
-              <div className={styles.quoteLeft}>
-                <QuoteLeft />
-              </div>
-              <p>
-                "La relación más importante de tu vida, es la relación que
-                tienes contigo misma, es por eso por lo que debes cuidarla,
-                alimentarla y fortalecerla."
-              </p>
-              <footer>DRA. MILEIDY FERNÁNDEZ RIBOT</footer>
-              <div className={styles.quoteRight}>
-                <QuoteRight />
-              </div>
-              <div className={styles.buttons}>
-                <Link href="/servicios">
-                  <button className={styles.button}>SERVICIOS</button>
-                </Link>
-                <Link href="/contacto">
-                  <button className={styles.button}>CONTACTO</button>
-                </Link>
-              </div>
-            </blockquote>
-          </div>
-          <Image
-            className={styles.profileImage}
-            src="/dra_escritora.jpg"
-            alt="Dra. Mileidy Fernández Ribot"
-            width={500}
-            height={600}
-            priority
-            loading="eager"
-            fetchPriority="high"
-          />
-        </div>
-        
+        <MainSection />
         <VideoSection 
           title="Semblanza de la Dra. Mileidy Fernández Ribot"
           videoId="fgsJh2w7x2A"

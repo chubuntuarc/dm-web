@@ -1,0 +1,140 @@
+.header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  color: var(--light-cream);
+  text-align: center;
+}
+
+.headerBackground {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.profileImage {
+  z-index: 0;
+  opacity: 1 !important;
+  object-fit: cover !important;
+  object-position: center !important;
+}
+
+.headerContent {
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  padding: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  margin: 0;
+  color: var(--light-cream);
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.titleBold {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  margin: 0;
+  color: #E5D6B3;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  color: #E5D6B3;
+  margin: 1rem 0 0;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+}
+
+.buttons {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+.button {
+  font-family: 'Montserrat', sans-serif;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--dark-cream);
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 100;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 14px;
+  min-width: 150px;
+}
+
+.button:hover {
+  background-color: #d6c7a4;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .header {
+    justify-content: flex-end;
+    padding-bottom: 10rem;
+  }
+  
+  .headerContent {
+    margin-top: auto;
+    padding: 2rem 1rem 0;
+  }
+  
+  .title, .titleBold {
+    font-size: 2rem;
+  }
+  
+  .subtitle {
+    font-size: 0.9rem;
+    margin: 1rem 0 2rem;
+  }
+  
+  .buttons {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+}
