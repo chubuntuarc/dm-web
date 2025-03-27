@@ -5,6 +5,8 @@ import Title_Banner from "../../components/Title_Banner";
 import { useState } from "react";
 import Diamond from "../../components/diamond";
 import Slider from "../../components/slider";
+import TextImage from "../../components/TextImage";
+import Chapters from "../../components/Chapters";
 
 export default function Trayectoria() {
   const [activeTab, setActiveTab] = useState("Trayectoria");
@@ -183,39 +185,17 @@ Tiene mucho que ver con nuestro autoconcepto, autoestima y amor propio.`,
 
           {activeTab === "MedicoEstetico" && (
             <div className={styles.medicalAdditionalContent}>
-              <div className={styles.credentialsContainer}>
-                <div className={styles.credentialsText}>
-                  <p>
-                    <strong>Es miembro fundador y directora general</strong> de
-                    la empresa clínica GEN conformada por la Clínica Imagen Art
-                    y Farmacia Dermatológica Campestre.
-                  </p>
-
-                  <p>
-                    Ha sido acreedora de dos diplomados en el Tecnológico de
-                    Monterrey, Dirección Gerencial y Liderazgo.
-                  </p>
-
-                  <p>
-                    Cuenta además con una certificación internacional en
-                    liderazgo por Johnson Maxwell, también certificada en el
-                    arte de hablar en público por el doctor César Lozano.
-                  </p>
-
-                  <p>
-                    Finalizó un programa de capacitación en Monterrey titulado
-                    Empresarios de alto rendimiento.
-                  </p>
-
-                  <p>
-                    Actualmente miembro activo de Board Media una comunidad
-                    colaborativa de CEO'S de habla hispana.
-                  </p>
-                </div>
-                <div className={styles.credentialsImage}>
-                  <img src="/medical.png" alt="Doctora trabajando" />
-                </div>
-              </div>
+              <TextImage 
+                textContent={[
+                  "Es miembro fundador y directora general de la empresa clínica GEN conformada por la Clínica Imagen Art y Farmacia Dermatológica Campestre.",
+                  "Ha sido acreedora de dos diplomados en el Tecnológico de Monterrey, Dirección Gerencial y Liderazgo.",
+                  "Cuenta además con una certificación internacional en liderazgo por Johnson Maxwell, también certificada en el arte de hablar en público por el doctor César Lozano.",
+                  "Finalizó un programa de capacitación en Monterrey titulado Empresarios de alto rendimiento.",
+                  "Actualmente miembro activo de Board Media una comunidad colaborativa de CEO'S de habla hispana."
+                ]}
+                imageSrc="/medical.png"
+                imageAlt="Doctora trabajando"
+              />
 
               <h3>Especialidades</h3>
               <p>
@@ -226,63 +206,19 @@ Tiene mucho que ver con nuestro autoconcepto, autoestima y amor propio.`,
 
           {activeTab === "Empresaria" && (
             <div className={styles.businessAdditionalContent}>
-              <div className={styles.credentialsContainer}>
-                <div className={styles.credentialsText}>
-                  <p>
-                    Disfruta apoyar y participar activamente en las asociaciones
-                    civiles: Mujer fascinante y LA ROCA CC, agradecida con México
-                    que dice tener tatuado en su corazón.
-                  </p>
-                  
-                  <p>
-                    Elige aceptar el reto de ser la presidenta fundadora
-                    de una de las asociaciones más influyentes de México
-                    en cuanto a representación de mujeres empresarias,
-                    la Asociación Mexicana de Mujeres Jefas de
-                    Empresa Representación Tijuana, por sus siglas AMMJE.
-                  </p>
-                  
-                  <p>
-                    A un año y medio de haber tomado protesta como
-                    presidenta fundadora, marca un hito en la historia de
-                    esta asociación recibiendo la distinción Mención
-                    Honorífica a mejor representación. Dicho
-                    reconocimiento fue entregado a manos de la
-                    presidenta nacional durante el marco de la Cumbre
-                    BIT Leaders el 2 de noviembre de 2023.
-                  </p>
-                  
-                  <p>
-                    Su desempeño y compromiso dentro de la
-                    asociación en muy poco tiempo la llevaron a ser
-                    nombrada, el 19 de enero de 2024, Delegada de la
-                    Región Norte.
-                  </p>
-                  
-                  <p>
-                    Con la intención de continuar fortaleciendo AMMJE
-                    Representación Tijuana y a su vez apoyando en
-                    aperturar representaciones en Baja California acepta
-                    el reto de nuevamente ser elegida presidenta de
-                    representación.
-                  </p>
-                  
-                  <p>
-                    Su intención es aprender y aprender enseñando
-                    porque reconoce que todas podemos ser mentoras
-                    de alguien más.
-                  </p>
-                  
-                  <p>
-                    Su visión personal: Dignificar la práctica de la medicina
-                    estética en tanto apoya en la inclusión exitosa de la mujer en
-                    el mundo empresarial.
-                  </p>
-                </div>
-                <div className={styles.credentialsImage}>
-                  <img src="/empresaria.jpg" alt="Dra. Mileidy como empresaria" />
-                </div>
-              </div>
+              <TextImage 
+                textContent={[
+                  "Disfruta apoyar y participar activamente en las asociaciones civiles: Mujer fascinante y LA ROCA CC, agradecida con México que dice tener tatuado en su corazón.",
+                  "Elige aceptar el reto de ser la presidenta fundadora de una de las asociaciones más influyentes de México en cuanto a representación de mujeres empresarias, la Asociación Mexicana de Mujeres Jefas de Empresa Representación Tijuana, por sus siglas AMMJE.",
+                  "A un año y medio de haber tomado protesta como presidenta fundadora, marca un hito en la historia de esta asociación recibiendo la distinción Mención Honorífica a mejor representación. Dicho reconocimiento fue entregado a manos de la presidenta nacional durante el marco de la Cumbre BIT Leaders el 2 de noviembre de 2023.",
+                  "Su desempeño y compromiso dentro de la asociación en muy poco tiempo la llevaron a ser nombrada, el 19 de enero de 2024, Delegada de la Región Norte.",
+                  "Con la intención de continuar fortaleciendo AMMJE Representación Tijuana y a su vez apoyando en aperturar representaciones en Baja California acepta el reto de nuevamente ser elegida presidenta de representación.",
+                  "Su intención es aprender y aprender enseñando porque reconoce que todas podemos ser mentoras de alguien más.",
+                  "Su visión personal: Dignificar la práctica de la medicina estética en tanto apoya en la inclusión exitosa de la mujer en el mundo empresarial."
+                ]}
+                imageSrc="/empresaria.jpg"
+                imageAlt="Dra. Mileidy como empresaria"
+              />
 
               <h3>Reconocimientos</h3>
               <p>
@@ -292,12 +228,44 @@ Tiene mucho que ver con nuestro autoconcepto, autoestima y amor propio.`,
           )}
 
           {activeTab === "Escritora" && (
-            <div className={styles.additionalContent}>
-              <h3>Publicaciones</h3>
-              <p>
-                Autora de "El arte de pulir un diamante" y coautora de otros
-                libros de desarrollo personal.
-              </p>
+            <div className={styles.writterAdditionalContent}>
+              <TextImage 
+                textContent={[
+                  `Todas atravesamos desiertos, vicisitudes, sin embargo, a pesar de todos nuestros desaciertos, "hoy es una nueva oportunidad de hacerlo diferente".`,
+                  "Y no se trata de, ¿que pase para llegar aquí?, sino de agradecer que estoy aquí. El libro es un viaje o una invitación para construirte.",
+                  "Y este viaje lo harás por medio de sus 5 capítulos:"
+                ]}
+                imageSrc="/escritora.jpg"
+                imageAlt="Dra. Mileidy como escritora"
+              />
+              <Chapters />
+              
+              <div className={styles.bookConclusion}>
+                <p>Finalmente, si no estás cómoda con algo de tu cuerpo, tu alma o tu espíritu, te quiero decir:</p>
+                <blockquote className={styles.quote}>
+                  No te detengas en los valles, porque ese no es el destino
+                  que Dios tiene preparado para tu vida.
+                </blockquote>
+              </div>
+              
+              <div className={styles.bookHighlight}>
+                <div className={styles.bookImageContainer}>
+                  <img src="/dra_path_esc.jpg" alt="Dra. Mileidy como escritora" />
+                </div>
+                <div className={styles.bookMessage}>
+                  <h3>El Arte de Pulir un Diamante® nos recuerda:</h3>
+                  <p className={styles.bookQuote}>
+                    Nuestra piel es el traje a la medida que nos acompañará a lo largo de toda la vida, poner especial énfasis en ella nos permitirá enviar un mensaje anónimo al mundo, será una acción que nos apoyará a brillar como el diamante que siempre hemos sido.
+                  </p>
+                  <p className={styles.bookQuote}>
+                    La obsesión consigo mismo es un callejón sin salida. La atención en los demás nos orienta a una vida libre y espaciosa".
+                  </p>
+                  <div className={styles.diamondIcon}>
+                    <Diamond />
+                  </div>
+                  <p className={styles.thankYou}>Muchas gracias.</p>
+                </div>
+              </div>
             </div>
           )}
         </div>
