@@ -65,21 +65,14 @@ export default function Home() {
           </p>
 
           <div className={styles.servicesList}>
-            <div className={styles.serviceImage}>
-              <Image
-                src="/services.jpg"
-                alt="Servicios de medicina estética"
-                width={300}
-                height={380}
-              />
-            </div>
-
             <div className={styles.servicesContent}>
               <div className={styles.serviceItem}>
-                <div className={styles.serviceDiamond}>
-                  <Diamond />
-                </div>
-                <h3>Medicina Estética</h3>
+                <h3>
+                  <span>
+                    <Diamond />
+                  </span>
+                  Medicina Estética
+                </h3>
                 <p>
                   Procedimientos avalados por Médicos con más de 15 años de
                   experiencia, que dignifican la práctica de la Medicina
@@ -89,16 +82,26 @@ export default function Home() {
               </div>
 
               <div className={styles.serviceItem}>
-                <div className={styles.serviceDiamond}>
-                  <Diamond />
-                </div>
-                <h3>Dermatológica Campestre</h3>
+                <h3>
+                  <span>
+                    <Diamond />
+                  </span>
+                  Dermatológica Campestre
+                </h3>
                 <p>
                   Soluciones integrales de productos top en el mercado para el
                   manejo, cuidado y protección de la piel.
                 </p>
                 <button className={styles.serviceButton}>Conocer más</button>
               </div>
+            </div>
+            <div className={styles.serviceImage}>
+              <Image
+                src="/services.jpg"
+                alt="Servicios de medicina estética"
+                width={300}
+                height={380}
+              />
             </div>
           </div>
         </div>

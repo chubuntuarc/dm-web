@@ -1,14 +1,14 @@
 .videoContainer {
   width: 100%;
-  margin: 3rem 0;
   text-align: center;
-  padding: 2rem 0;
+  padding: 2rem 1rem;
 }
 
 .videoTitle {
+  font-family: "Montserrat", sans-serif;
   color: #333;
   margin-bottom: 2rem;
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   text-align: center;
 }
 
