@@ -177,19 +177,75 @@ a.secondary {
   text-align: center;
 }
 
-/* Update the quote SVG positioning */
+.quoteSection {
+  width: 100%;
+  padding: 60px 20px;
+  background-color: #FFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.quoteContainer {
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 0 16px;
+}
+
+.diamondIcon {
+  margin-bottom: 30px;
+}
+
+.quoteText {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  color: #333;
+  position: relative;
+  z-index: 1;
+}
+
+.quoteItalic {
+  font-style: italic;
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+
+.quoteBold {
+  font-weight: 400;
+  margin-top: 5px;
+}
+
+.quoteAuthor {
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  color: #333;
+}
+
 .quoteLeft {
   position: absolute;
-  left: 20px;
-  top: 20px;
-  opacity: 0.3;
+  left: 0px;
+  top: 70px;
+  opacity: 0.4;
+  z-index: 0;
+  transform: scale(1.2);
 }
 
 .quoteRight {
   position: absolute;
-  right: 20px;
-  bottom: 160px;
-  opacity: 0.3;
+  right: 0px;
+  bottom: 20px;
+  opacity: 0.4;
+  z-index: 0;
+  transform: scale(1.2);
 }
 
 .headerContent blockquote p {

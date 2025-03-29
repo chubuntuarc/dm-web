@@ -5,6 +5,8 @@ import Diamond from "../components/diamond";
 import Head from "next/head";
 import VideoSection from "../components/VideoSection";
 import MainSection from "../components/MainSection";
+import QuoteLeft from '../components/quote_left';
+import QuoteRight from '../components/quote_right';
 
 export default function Home() {
   return (
@@ -19,14 +21,42 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <MainSection />
-        <VideoSection 
+        <div className={styles.quoteSection}>
+          <div className={styles.quoteContainer}>
+            <div className={styles.diamondIcon}>
+              <Diamond />
+            </div>
+            <div className={styles.quoteLeft}>
+              <QuoteLeft />
+            </div>
+            <p className={styles.quoteText}>
+              <span className={styles.quoteItalic}>
+                La relación más importante de tu vida,
+              </span>
+              <span className={styles.quoteItalic}>
+                es la relación que tienes contigo
+              </span>
+              <span className={styles.quoteItalic}>
+                misma, es por eso por lo que debes
+              </span>
+              <span className={styles.quoteBold}>
+                cuidarla, alimentarla y fortalecerla.
+              </span>
+            </p>
+            <div className={styles.quoteRight}>
+              <QuoteRight />
+            </div>
+            <p className={styles.quoteAuthor}>DRA. MILEIDY FERNÁNDEZ RIBOT</p>
+          </div>
+        </div>
+        <VideoSection
           title="Semblanza de la Dra. Mileidy Fernández Ribot"
           videoId="fgsJh2w7x2A"
           videoTitle="Semblanza de la Dra. Mileidy Fernández Ribot"
-          backgroundColor="#FFF9F0"
+          backgroundColor="#FFF4E7"
           titleColor="#333"
         />
-        
+
         <div className={styles.services}>
           <h2>Nuestros Servicios</h2>
           <p className={styles.servicesIntro}>
