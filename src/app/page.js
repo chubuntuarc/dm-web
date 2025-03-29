@@ -7,7 +7,7 @@ import VideoSection from "../components/VideoSection";
 import MainSection from "../components/MainSection";
 import QuoteLeft from '../components/quote_left';
 import QuoteRight from '../components/quote_right';
-
+import Link from "next/link";
 export default function Home() {
   return (
     <div className={styles.page}>
@@ -78,7 +78,7 @@ export default function Home() {
                   experiencia, que dignifican la práctica de la Medicina
                   Estética alineando el Ser al Parecer.
                 </p>
-                <button className={styles.serviceButton}>Conocer más</button>
+                <Link href="/medicina" className={styles.serviceButton}>Conocer más</Link>
               </div>
 
               <div className={styles.serviceItem}>
@@ -92,7 +92,7 @@ export default function Home() {
                   Soluciones integrales de productos top en el mercado para el
                   manejo, cuidado y protección de la piel.
                 </p>
-                <button className={styles.serviceButton}>Conocer más</button>
+                <Link href="/dermatologia" className={styles.serviceButton}>Conocer más</Link>
               </div>
             </div>
             <div className={styles.serviceImage}>
@@ -103,6 +103,26 @@ export default function Home() {
                 height={380}
               />
             </div>
+          </div>
+        </div>
+        
+        <div className={styles.carrer}>
+          <h2>Trayectoria</h2>
+          <p className={styles.carrerSubtitle}>
+            CRECIMIENTO DE UNA MUJER EXTRAORDINARIA
+          </p>
+          <p className={styles.carrerDescription}>
+            Conoce más de la Dra. Mileidy Fernández Ribot. Descubre su historia, su filosofía de 
+            vida y el crecimiento de una mujer visionaria.
+          </p>
+          <Link href="/trayectoria" className={styles.carrerButton}>Ver más</Link>
+          <div className={styles.carrerImage}>
+            <Image
+              src="/inicio-trayectoria.jpg"
+              alt="Dra. Mileidy Fernández Ribot"
+              width={300}
+              height={450}
+            />
           </div>
         </div>
       </main>

@@ -402,7 +402,7 @@ a.secondary {
   background-color: var(--dark-cream);
   color: #000;
   border: none;
-  padding: 0.75rem 1.5rem;
+  padding: 0.6rem 1.5rem;
   border-radius: 7px;
   font-size: 0.9rem;
   cursor: pointer;
@@ -440,5 +440,88 @@ a.secondary {
   
   .servicesContent {
     width: 100%;
+  }
+}
+
+.carrer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 1rem;
+  background-color: #FFF8E7;
+  position: relative;
+}
+
+.carrer h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 25px;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.carrerSubtitle {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+  color: #666;
+  font-weight: 100;
+}
+
+.carrerDescription {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 100;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.carrerButton {
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--dark-cream);
+  color: #000;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: 7px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-weight: 500;
+  text-decoration: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 130px;
+  width: fit-content;
+}
+
+.carrerButton:hover {
+  background-color: var(--light-cream);
+}
+
+.carrerImage {
+  margin-top: 2rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.carrerImage img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* For responsive design */
+@media (min-width: 768px) {
+  .carrer {
+    padding: 5rem 3rem;
+  }
+  
+  .carrerImage {
+    width: 350px;
   }
 }
