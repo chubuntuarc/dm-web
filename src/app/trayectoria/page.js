@@ -4,7 +4,9 @@ import styles from "./path.module.css";
 import Title_Banner from "../../components/Title_Banner";
 import { useState } from "react";
 import Diamond from "../../components/diamond";
-import Slider from "../../components/slider";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import TextImage from "../../components/TextImage";
 import Chapters from "../../components/Chapters";
 
@@ -191,7 +193,31 @@ Tiene mucho que ver con nuestro autoconcepto, autoestima y amor propio.`,
                   </div>
                 </div>
               </div>
-              <Slider slides={slides} />
+              <div className={styles.sliderContainer}>
+                <Slider
+                  dots={true}
+                  infinite={true}
+                  speed={500}
+                  slidesToShow={1}
+                  slidesToScroll={1}
+                  autoplay={true}
+                  autoplaySpeed={5000}
+                  arrows={true}
+                  className={styles.customSlider}
+                >
+                  {slides.map((slide) => (
+                    <div key={slide.id} className={styles.slide}>
+                      <div className={styles.slideInner}>
+                        <img src={slide.image} alt={slide.title} />
+                        <div className={styles.slideContent}>
+                          <h3>{slide.title}</h3>
+                          <p>{slide.description}</p>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </Slider>
+              </div>
             </div>
           )}
 
