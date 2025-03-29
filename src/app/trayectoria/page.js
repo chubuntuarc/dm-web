@@ -9,6 +9,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import TextImage from "../../components/TextImage";
 import Chapters from "../../components/Chapters";
+import Arrow from "../../components/arrow";
 
 export default function Trayectoria() {
   const [activeTab, setActiveTab] = useState("Trayectoria");
@@ -62,7 +63,7 @@ Entonces entendí que, en nuestro ADN, es decir, en nuestra naturaleza, está cr
       Más de 25 años dedicados a la medicina, de ellos, más de 15 años dedicados a la medicina estética en México.
 Todo esto respalda su profesionalismo y la han llevado a ser referente del ramo a nivel nacional e internacional. 
 `,
-      image: "/dra_path_med.png",
+      image: "/medical.png",
     },
     {
       id: "Empresaria",
@@ -121,7 +122,7 @@ Tiene mucho que ver con nuestro autoconcepto, autoestima y amor propio.`,
                   >
                     <div className={styles.tabItemContent}>
                       <div className={styles.arrowCircle}>
-                        <span className={styles.arrow}>→</span>
+                        <Arrow />
                       </div>
                       <span className={styles.tabTitle}>{tab.title}</span>
                     </div>
@@ -222,24 +223,24 @@ Tiene mucho que ver con nuestro autoconcepto, autoestima y amor propio.`,
           )}
 
           {activeTab === "MedicoEstetico" && (
-            <div className={styles.medicalAdditionalContent}>
-              <TextImage
-                textContent={[
-                  "Es miembro fundador y directora general de la empresa clínica GEN conformada por la Clínica Imagen Art y Farmacia Dermatológica Campestre.",
-                  "Ha sido acreedora de dos diplomados en el Tecnológico de Monterrey, Dirección Gerencial y Liderazgo.",
-                  "Cuenta además con una certificación internacional en liderazgo por Johnson Maxwell, también certificada en el arte de hablar en público por el doctor César Lozano.",
-                  "Finalizó un programa de capacitación en Monterrey titulado Empresarios de alto rendimiento.",
-                  "Actualmente miembro activo de Board Media una comunidad colaborativa de CEO'S de habla hispana.",
-                ]}
-                imageSrc="/medical.png"
-                imageAlt="Doctora trabajando"
-              />
-
-              <h3>Especialidades</h3>
-              <p>
-                Tratamientos faciales, corporales y procedimientos no invasivos.
-              </p>
-            </div>
+            <>
+              <div className={styles.medicalAdditionalPicture}>
+                <img src="/dra_path_med.png" alt="Dra. Mileidy" />
+              </div>
+              <div className={styles.medicalAdditionalContent}>
+                <TextImage
+                  textContent={[
+                    "Es miembro fundador y directora general de la empresa clínica GEN conformada por la Clínica Imagen Art y Farmacia Dermatológica Campestre.",
+                    "Ha sido acreedora de dos diplomados en el Tecnológico de Monterrey, Dirección Gerencial y Liderazgo.",
+                    "Cuenta además con una certificación internacional en liderazgo por Johnson Maxwell, también certificada en el arte de hablar en público por el doctor César Lozano.",
+                    "Finalizó un programa de capacitación en Monterrey titulado Empresarios de alto rendimiento.",
+                    "Actualmente miembro activo de Board Media una comunidad colaborativa de CEO'S de habla hispana.",
+                  ]}
+                  imageSrc="/medico_2.jpg"
+                  imageAlt="Doctora trabajando"
+                />
+              </div>
+            </>
           )}
 
           {activeTab === "Empresaria" && (
