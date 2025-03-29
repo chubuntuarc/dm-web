@@ -2,23 +2,24 @@
   background: linear-gradient(to bottom, #ffffff, #FFF4E7);
   width: 100%;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .bioContent {
   text-align: center;
-  margin-bottom: 3rem;
 }
 
 .bioTitle {
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
   margin-bottom: 0.5rem;
   color: #000;
 }
 
 .bioSubtitle {
-  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
   letter-spacing: 1px;
   color: #333;
   margin-bottom: 2rem;
@@ -26,12 +27,13 @@
 }
 
 .bioIntro {
+  font-family: "Montserrat", sans-serif;
   color: #333;
   max-width: 900px;
   margin: 0 auto 3rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.6;
-  text-align: left;
+  text-align: center;
 }
 
 .bioIntro p {
@@ -41,44 +43,48 @@
 .bioCards {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 30px;
+  margin: 0px auto;
+  max-width: 1200px;
   flex-wrap: wrap;
-  margin-bottom: 3rem;
 }
 
 .bioCard {
-  width: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
+  flex: 1;
+  max-width: 320px;
+  min-width: 0; /* Allow cards to shrink if needed */
 }
 
 .bioCardImage {
   width: 100%;
-  height: 350px;
+  height: 320px; /* Fixed height for consistency */
+  border-radius: 12px;
   overflow: hidden;
-  margin-bottom: 1rem;
-  border-radius: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f8f8f8;
+  margin-bottom: 15px;
 }
 
 .bioCardImage img {
   width: 100%;
   height: 100%;
+  display: block;
   object-fit: cover;
-  object-position: top;
+  transition: transform 0.3s ease;
 }
 
-.bioCard h2 {
-  font-size: 1.75rem;
+.bioCardImage img:hover {
+  transform: scale(1.03);
+}
+
+.bioCardTitle {
+  font-size: 1rem;
   font-weight: 600;
-  margin-top: 0.5rem;
-  color: #000;
+  margin: 0;
   text-align: center;
+  color: #333;
+  font-family: "Montserrat", sans-serif;
 }
 
 .section {
@@ -102,17 +108,34 @@
   margin-bottom: 0.5rem;
 }
 
-@media (max-width: 768px) {
-  .bioTitle {
-    font-size: 2rem;
-  }
-  
+@media (max-width: 900px) {
   .bioCards {
-    gap: 1rem;
+    gap: 20px;
   }
   
   .bioCard {
-    width: 250px;
+    max-width: 280px;
+  }
+  
+  .bioCardImage {
+    height: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .bioCards {
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .bioCard {
+    margin-bottom: 40px;
+    max-width: 320px;
+    width: 100%;
+  }
+  
+  .bioCardImage {
+    height: 320px;
   }
 }
 
@@ -127,6 +150,7 @@
 }
 
 .sectionTitle {
+  font-family: "Montserrat", sans-serif;
   font-size: 2.2rem;
   text-align: center;
   margin-bottom: 2.5rem;
@@ -147,19 +171,23 @@
 }
 
 .subTitle {
+  font-family: "Montserrat", sans-serif;
   font-size: 1.5rem;
   margin-top: 2.5rem;
   margin-bottom: 1rem;
-  color: #333;
-  font-weight: 500;
+  color: #000;
+  font-weight: 600;
+  text-align: center;
+  margin: 16px auto;
 }
 
 .vision {
+  font-family: "Montserrat", sans-serif;
   background-color: #FFF4E7;
-  padding: 30px 40px 30px 60px;
+  padding: 16px 16px 16px 60px;
   border-radius: 8px;
   position: relative;
-  margin: 30px 60px;
+  margin: 30px 16px;
 }
 
 .diamondIcon {
@@ -181,7 +209,7 @@
 }
 
 .visionTitle {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
   color: #333;
@@ -201,12 +229,12 @@
   }
   
   .sectionTitle {
-    font-size: 1.8rem;
-    margin-bottom: 2rem;
+    font-size: 18px;
+    margin-bottom: 1rem;
   }
   
   .subTitle {
-    font-size: 1.3rem;
+    font-size: 18px;
     margin-top: 2rem;
   }
   
@@ -217,8 +245,8 @@
 
 /* Timeline section styles */
 .path {
-  padding: 3rem 1rem;
-  background-color: #FFF9F0;
+  padding: 1rem;
+  background-color: var(--cream);
   position: relative;
 }
 
@@ -226,7 +254,6 @@
   position: relative;
   max-width: 1000px;
   margin: 0 auto;
-  padding: 2rem 0;
 }
 
 .timeline::before {
@@ -241,10 +268,11 @@
 }
 
 .timelineItem {
+  font-family: "Montserrat", sans-serif;
   color: #333;
   position: relative;
-  margin-bottom: 3rem;
-  padding-left: 100px;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
 }
 
 .timelineDot {
@@ -283,18 +311,22 @@
 /* Mobile layout (default) */
 @media (max-width: 767px) {
   .timeline::before {
-    left: 70px;
+    left: 1rem;
   }
   
   .timelineItem {
-    padding-left: 100px;
+    padding-left: 2rem;
     width: 100%;
     text-align: left;
   }
   
   .timelineDot {
-    left: 70px;
+    left: 1rem;
     margin-left: -6px;
+  }
+  
+  .diamondLarge {
+    display: none;
   }
 }
 

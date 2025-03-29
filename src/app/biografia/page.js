@@ -30,7 +30,7 @@ export default function Biografia() {
               <div className={styles.bioCardImage}>
                 <img src="/dra_med.jpg" alt="Dra. Mileidy como médico" />
               </div>
-              <h2>Médico</h2>
+              <h2 className={styles.bioCardTitle}>Médico</h2>
             </div>
 
             <div className={styles.bioCard}>
@@ -40,7 +40,7 @@ export default function Biografia() {
                   alt="Dra. Mileidy como empresaria"
                 />
               </div>
-              <h2>Empresaria</h2>
+              <h2 className={styles.bioCardTitle}>Empresaria</h2>
             </div>
 
             <div className={styles.bioCard}>
@@ -50,7 +50,7 @@ export default function Biografia() {
                   alt="Dra. Mileidy como escritora"
                 />
               </div>
-              <h2>Escritora</h2>
+              <h2 className={styles.bioCardTitle}>Escritora</h2>
             </div>
           </div>
         </div>
@@ -125,7 +125,6 @@ export default function Biografia() {
         </div>
       </div>
       <div className={styles.path}>
-        <h2 className={styles.sectionTitle}>Trayectoria</h2>
         <div className={styles.timeline}>
           <div className={styles.timelineItem}>
             <div className={styles.timelineDot}></div>
