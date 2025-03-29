@@ -85,11 +85,7 @@ Coautora de los libros Ser mujer es fascinante, año 2022 y la historia de 100 m
       heading: `El arte de pulir un diamante`,
       description: `Somos seres perfectos desde nuestra creación, físicamente y también nos fueron dados los dones y talentos necesarios para vivir nuestro propósito.
 
-      Sin embargo, a lo largo de la vida vamos construyendo un personaje, mismo que puede verse influenciado por los padres, familiares, maestros, amigos, medios de comunicación, influencers de moda etc.
-
-      Puede suceder que ese "personaje" que vamos construyendo no está alineado a lo que pensamos, sentimos, decimos o hacemos, y no nos apoya para lograr el propósito de vida.
-
-Tiene mucho que ver con nuestro autoconcepto, autoestima y amor propio.`,
+        Sin embargo, a lo largo de la vida vamos construyendo un personaje, mismo que puede verse influenciado por los padres, familiares, maestros, amigos, medios de comunicación, influencers de moda etc.`,
       image: "/dra_path_esc.jpg",
     },
   ];
@@ -257,26 +253,30 @@ Tiene mucho que ver con nuestro autoconcepto, autoestima y amor propio.`,
                 ]}
                 imageSrc="/empresaria.jpg"
                 imageAlt="Dra. Mileidy como empresaria"
+                imagePosition="right"
+                imageWidth="50%"
+                imageHeight="50%"
               />
-
-              <h3>Reconocimientos</h3>
-              <p>
-                Acreedora de la Distinción Mujer líder en Baja California y
-                reconocida por su labor empresarial en diversos medios.
-              </p>
             </div>
           )}
 
           {activeTab === "Escritora" && (
             <div className={styles.writterAdditionalContent}>
               <TextImage
+                textContent={[" "]}
+                imageSrc="/escritora.jpg"
+                imageAlt="Dra. Mileidy como escritora"
+              />
+              <TextImage
                 textContent={[
-                  `Todas atravesamos desiertos, vicisitudes, sin embargo, a pesar de todos nuestros desaciertos, "hoy es una nueva oportunidad de hacerlo diferente".`,
+                  "Puede suceder que ese “personaje” que vamos construyendo no está alineado a lo que pensamos, sentimos, decimos o hacemos, y no nos apoya para lograr el propósito de vida.",
+                  "Tiene mucho que ver con nuestro autoconcepto, autoestima y amor propio.",
+                  "Todas atravesamos desiertos, vicisitudes, sin embargo, a pesar de todos nuestros desaciertos, “hoy es una nueva oportunidad de hacerlo diferente”.",
                   "Y no se trata de, ¿que pase para llegar aquí?, sino de agradecer que estoy aquí. El libro es un viaje o una invitación para construirte.",
                   "Y este viaje lo harás por medio de sus 5 capítulos:",
                 ]}
-                imageSrc="/escritora.jpg"
-                imageAlt="Dra. Mileidy como escritora"
+                imageSrc=""
+                imageAlt=""
               />
               <Chapters />
 
@@ -312,9 +312,6 @@ Tiene mucho que ver con nuestro autoconcepto, autoestima y amor propio.`,
                     atención en los demás nos orienta a una vida libre y
                     espaciosa".
                   </p>
-                  <div className={styles.diamondIcon}>
-                    <Diamond />
-                  </div>
                   <p className={styles.thankYou}>Muchas gracias.</p>
                 </div>
               </div>
