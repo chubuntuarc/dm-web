@@ -20,15 +20,18 @@ const Header = () => {
     { label: 'Blog', href: '/blog' },
   ];
 
+  // Determine if we're on the home page
+  const isHomePage = pathname === '/';
+
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header} ${isHomePage ? styles.homeHeader : ''}`}>
       <div className={styles.container}>
         <Link href="/" className={styles.logo}>
           <Image
             src="/logo.png" // Make sure to add your logo to the public folder
             alt="Dra. Mileidy Fernandez Ribot"
-            width={320}
-            height={60}
+            width={186}
+            height={40}
             priority
           />
         </Link>
@@ -83,7 +86,7 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         <div 
-          className={`${styles.mobileNav} ${isOpen ? styles.isOpen : ''}`}
+          className={`${styles.mobileNav} ${isOpen ? styles.isOpen : ''} ${isHomePage ? styles.homeMobileNav : ''}`}
         >
           <nav className={styles.mobileNavInner}>
             {menuItems.map((item) => (

@@ -449,7 +449,7 @@ a.secondary {
   align-items: center;
   text-align: center;
   padding: 4rem 1rem;
-  background-color: #FFF8E7;
+  background-color: var(--cream);
   position: relative;
 }
 

@@ -5,6 +5,17 @@
   box-shadow: none;
 }
 
+.homeHeader {
+  /* Add specific styles for the home page header */
+  background-color: transparent;
+  position: absolute;
+  z-index: 10;
+}
+
+.homeMobileNav {
+  background-color: #0a0e0f;
+}
+
 .container {
   max-width: 1280px;
   margin: 0 auto;

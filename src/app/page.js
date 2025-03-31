@@ -53,7 +53,7 @@ export default function Home() {
           title="Semblanza de la Dra. Mileidy Fernández Ribot"
           videoId="fgsJh2w7x2A"
           videoTitle="Semblanza de la Dra. Mileidy Fernández Ribot"
-          backgroundColor="#FFF4E7"
+          backgroundColor="var(--cream)"
           titleColor="#333"
         />
 
@@ -78,7 +78,9 @@ export default function Home() {
                   experiencia, que dignifican la práctica de la Medicina
                   Estética alineando el Ser al Parecer.
                 </p>
-                <Link href="/medicina" className={styles.serviceButton}>Conocer más</Link>
+                <Link href="/medicina" className={styles.serviceButton}>
+                  Conocer más
+                </Link>
               </div>
 
               <div className={styles.serviceItem}>
@@ -92,7 +94,9 @@ export default function Home() {
                   Soluciones integrales de productos top en el mercado para el
                   manejo, cuidado y protección de la piel.
                 </p>
-                <Link href="/dermatologia" className={styles.serviceButton}>Conocer más</Link>
+                <Link href="/dermatologia" className={styles.serviceButton}>
+                  Conocer más
+                </Link>
               </div>
             </div>
             <div className={styles.serviceImage}>
@@ -105,17 +109,19 @@ export default function Home() {
             </div>
           </div>
         </div>
-        
+
         <div className={styles.carrer}>
           <h2>Trayectoria</h2>
           <p className={styles.carrerSubtitle}>
             CRECIMIENTO DE UNA MUJER EXTRAORDINARIA
           </p>
           <p className={styles.carrerDescription}>
-            Conoce más de la Dra. Mileidy Fernández Ribot. Descubre su historia, su filosofía de 
-            vida y el crecimiento de una mujer visionaria.
+            Conoce más de la Dra. Mileidy Fernández Ribot. Descubre su historia,
+            su filosofía de vida y el crecimiento de una mujer visionaria.
           </p>
-          <Link href="/trayectoria" className={styles.carrerButton}>Ver más</Link>
+          <Link href="/trayectoria" className={styles.carrerButton}>
+            Ver más
+          </Link>
           <div className={styles.carrerImage}>
             <Image
               src="/inicio-trayectoria.jpg"
