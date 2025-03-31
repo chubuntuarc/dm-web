@@ -10,9 +10,10 @@
 }
 
 .intro {
+  font-family: "Montserrat", sans-serif;
   text-align: center;
-  margin-bottom: 2rem;
-  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
   color: #333;
 }
 
