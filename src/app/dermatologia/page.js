@@ -1,9 +1,56 @@
+"use client"
 import styles from "./derma.module.css";
 import Image from "next/image";
 import Title_Banner from "../../components/Title_Banner";
 import Diamond from "../../components/diamond";
+import Link from "next/link";
+import { useState, useEffect, useRef } from "react";
 
 export default function Dermatologia() {
+  const [isButtonHidden, setIsButtonHidden] = useState(false);
+  const buttonRef = useRef(null);
+  
+  useEffect(() => {
+    const footer = document.querySelector('footer');
+    const button = buttonRef.current;
+    
+    if (!footer || !button) return;
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          setIsButtonHidden(true);
+        } else {
+          setIsButtonHidden(false);
+        }
+      });
+    }, { threshold: 0.1 }); // Trigger when 10% of footer is visible
+    
+    observer.observe(footer);
+    
+    // Cleanup
+    return () => {
+      if (footer) observer.unobserve(footer);
+    };
+  }, []);
+
+  const slides = [
+    {
+      id: 1,
+      image: "/kit-hidratacion.png",
+      title: "KIT CUIDADO HIDRATACIÓN DE LA PIEL FACIAL",
+    },
+    {
+      id: 2,
+      image: "/kit-acne.png",
+      title: "KIT PARA PIEL ACNEICA I",
+    },
+    {
+      id: 3,
+      image: "/kit-regenerador.png",
+      title: "KIT REGENERADOR DE LA PIEL I",
+    },
+  ];
   return (
     <>
       <Title_Banner title="Dermatológica Campestre" />
@@ -90,6 +137,13 @@ export default function Dermatologia() {
             Descubre la verdadera belleza con nuestros Kits Dermatológicos
             exclusivos.
           </h2>
+          <Image
+            src="/derma.png"
+            alt="Kit de hidratación facial"
+            width={350}
+            height={350}
+            className={styles.kitsIntroImage}
+          />
           <p>
             Creados pensando en el amor que tu piel merece, cada kit es una
             experiencia de cuidado de la piel diseñada para nutrir, tonificar y
@@ -104,39 +158,16 @@ export default function Dermatologia() {
             tu camino!
           </p>
         </div>
-
-        <div className={styles.kitsGallery}>
-          <div className={styles.kitCard}>
-            <h3>KIT CUIDADO HIDRATACIÓN DE LA PIEL FACIAL</h3>
-            <Image
-              src="/kit-hidratacion.png"
-              alt="Kit de hidratación facial"
-              width={250}
-              height={200}
-            />
-          </div>
-
-          <div className={styles.kitCard}>
-            <h3>KIT PARA PIEL ACNEICA I</h3>
-            <Image
-              src="/kit-acne.png"
-              alt="Kit para piel acneica"
-              width={250}
-              height={200}
-            />
-          </div>
-
-          <div className={styles.kitCard}>
-            <h3>KIT REGENERADOR DE LA PIEL I</h3>
-            <Image
-              src="/kit-regenerador.png"
-              alt="Kit regenerador de la piel"
-              width={250}
-              height={200}
-            />
-          </div>
-        </div>
       </div>
+      
+      <Link href="https://dermatologicacampestre.com/" target="_blank">
+        <button 
+          ref={buttonRef}
+          className={`${styles.kitsButton} ${isButtonHidden ? styles.kitsButtonHidden : ''}`}
+        >
+          Visita la Tienda
+        </button>
+      </Link>
     </>
   );
 }
