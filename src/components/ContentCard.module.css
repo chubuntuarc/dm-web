@@ -1,0 +1,94 @@
+.diamondTitleContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.diamondIcon {
+  display: flex;
+  align-items: center;
+  transform: scale(0.7);
+}
+
+.serviceCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.serviceIcon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.serviceImageContainer {
+  width: 100%;
+  position: relative;
+  height: 350px;
+}
+
+.serviceImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.serviceDiamond {
+  margin: 0;
+  z-index: 2;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.serviceTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 1rem 0;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.serviceDescription {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  padding: 0 1.5rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+.serviceLink {
+  text-decoration: none;
+  margin-bottom: 1.5rem;
+}
+
+.serviceButton {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  background-color: var(--dark-cream);
+  color: #333;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 135px;
+}
+
+.serviceButton:hover {
+  background-color: var(--dark-cream);
+  transform: translateY(-2px);
+}
+
+.serviceLink a {
+  color: #333;
+  text-decoration: none;
+} 
