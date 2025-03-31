@@ -110,7 +110,7 @@
   top: 0;
   right: -100%;
   width: 80%;
-  height: 60vh;
+  height: 100vh;
   background-color: var(--cream);
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
   transition: right 0.3s ease-in-out;

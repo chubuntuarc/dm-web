@@ -13,6 +13,7 @@ const ContentCard = ({
   showIcon = true,
   showButton = true,
   showImage = true,
+  buttonText = "Ver más",
 }) => {
   return (
     <div className={styles.serviceCard}>
@@ -41,9 +42,9 @@ const ContentCard = ({
       {showButton && (
         <a href={linkUrl} className={styles.serviceLink}>
           {isButton ? (
-            <button className={styles.serviceButton}>Ver más</button>
+            <button className={styles.serviceButton}>{buttonText}</button>
           ) : (
-            "Ver más →"
+            buttonText
           )}
         </a>
       )}
