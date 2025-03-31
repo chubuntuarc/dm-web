@@ -262,22 +262,27 @@ Coautora de los libros Ser mujer es fascinante, año 2022 y la historia de 100 m
 
           {activeTab === "Escritora" && (
             <div className={styles.writterAdditionalContent}>
-              <TextImage
-                textContent={[" "]}
-                imageSrc="/escritora.jpg"
-                imageAlt="Dra. Mileidy como escritora"
-              />
-              <TextImage
-                textContent={[
-                  "Puede suceder que ese “personaje” que vamos construyendo no está alineado a lo que pensamos, sentimos, decimos o hacemos, y no nos apoya para lograr el propósito de vida.",
-                  "Tiene mucho que ver con nuestro autoconcepto, autoestima y amor propio.",
-                  "Todas atravesamos desiertos, vicisitudes, sin embargo, a pesar de todos nuestros desaciertos, “hoy es una nueva oportunidad de hacerlo diferente”.",
-                  "Y no se trata de, ¿que pase para llegar aquí?, sino de agradecer que estoy aquí. El libro es un viaje o una invitación para construirte.",
-                  "Y este viaje lo harás por medio de sus 5 capítulos:",
-                ]}
-                imageSrc=""
-                imageAlt=""
-              />
+              <div className={styles.writterAdditionalPicture}>
+                <TextImage
+                  textContent={[" "]}
+                  imageSrc="/escritora.jpg"
+                  imageAlt="Dra. Mileidy como escritora"
+                />
+              </div>
+              <div className={styles.writterTextImage}>
+                <TextImage
+                  textContent={[
+                    "Puede suceder que ese “personaje” que vamos construyendo no está alineado a lo que pensamos, sentimos, decimos o hacemos, y no nos apoya para lograr el propósito de vida.",
+                    "Tiene mucho que ver con nuestro autoconcepto, autoestima y amor propio.",
+                    "Todas atravesamos desiertos, vicisitudes, sin embargo, a pesar de todos nuestros desaciertos, “hoy es una nueva oportunidad de hacerlo diferente”.",
+                    "Y no se trata de, ¿que pase para llegar aquí?, sino de agradecer que estoy aquí. El libro es un viaje o una invitación para construirte.",
+                    "Y este viaje lo harás por medio de sus 5 capítulos:",
+                  ]}
+                  imageSrc=""
+                  imageAlt=""
+                />
+              </div>
+
               <Chapters />
 
               <div className={styles.bookConclusion}>

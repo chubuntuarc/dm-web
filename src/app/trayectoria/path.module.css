@@ -201,6 +201,18 @@
   margin: 1rem 0;
 }
 
+.writterTextImage {
+  background-color: var(--cream);
+  margin: -120px auto -64px auto;
+  padding-top: 64px;
+  z-index: 0;
+}
+
+.writterAdditionalPicture {
+  margin-top: -96px;
+  z-index: 1;
+}
+
 .credentialsContainer {
   display: flex;
   gap: 2rem;

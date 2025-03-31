@@ -1,45 +1,53 @@
 .chaptersContainer {
+  background-color: var(--cream);
   display: flex;
   flex-direction: column;
-  margin: 2rem 0;
+  padding: 1rem;
 }
 
 .chapter {
   display: flex;
   gap: 1.5rem;
   align-items: flex-start;
-  background-color: #FFF4E7;
+  background-color: #FFF;
   padding: 1.5rem;
-  border-radius: 8px;
 }
 
 .chapterNumber {
-  background-color: #FFF;
+  background-color: var(--cream);
   border-radius: 50%;
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 16px;
+  font-weight: 600;
   color: #000;
-  min-width: 60px;
+  width: 32px;
+  height: 32px;
+  padding-top: 0.5rem;
   text-align: center;
-  padding: 1rem;
+  margin-left: -1.7rem;
 }
 
 .chapterContent {
+  background-color: #FFF;
   flex: 1;
+  margin-top: 1.5rem;
 }
 
 .chapterContent h4 {
+  font-family: "Montserrat", sans-serif;
   margin-top: 0;
   margin-bottom: 0.5rem;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 600;
   color: #333;
+  padding-left: 1rem;
 }
 
 .chapterContent p {
+  font-family: "Montserrat", sans-serif;
   margin: 0;
   line-height: 1.6;
   color: #555;
+  padding-left: 1rem;
 }
 
 @media (max-width: 768px) {
@@ -47,11 +55,5 @@
     flex-direction: column;
     gap: 0.5rem;
     padding: 1rem;
-  }
-  
-  .chapterNumber {
-    font-size: 2rem;
-    min-width: auto;
-    margin-bottom: 0.5rem;
   }
 }

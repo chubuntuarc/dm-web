@@ -39,8 +39,8 @@ const Chapters = () => {
     <div className={styles.chaptersContainer}>
       {chaptersData.map((chapter, index) => (
         <div key={index} className={styles.chapter}>
-          <div className={styles.chapterNumber}>{chapter.number}</div>
           <div className={styles.chapterContent}>
+          <div className={styles.chapterNumber}>{chapter.number}</div>
             <h4>{chapter.title}</h4>
             <p>{chapter.content}</p>
           </div>
