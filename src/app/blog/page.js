@@ -1,41 +1,51 @@
 import styles from "./blog.module.css";
 import Title_Banner from "../../components/Title_Banner";
 import Link from "next/link";
+import Search from "../../components/search";
 
-export default function Blog() {
-  // Sample blog posts data
-  const blogPosts = [
-    {
-      id: 1,
-      title: "Labios Hidratados: La Clave para una Sonrisa Saludable",
-      category: "Dermatología",
-      slug: "labios-hidratados"
-    },
-    {
-      id: 2,
-      title: "Relleno de Labios: El inicio de una sonrisa irresistible",
-      category: "Medicina Estética",
-      slug: "relleno-labios"
-    },
-    {
-      id: 3,
-      title: "La Importancia de apoyar la Reparación Celular de la Piel",
-      category: "Dermatología",
-      slug: "reparacion-celular-piel"
-    },
-    {
-      id: 4,
-      title: "Descubre el Poder de una piel saludable; Peelings: Tipos, Beneficios de practicarlos",
-      category: "Medicina Estética",
-      slug: "peelings-beneficios"
-    },
-    {
-      id: 5,
-      title: "La piel es el traje a la medida que nos acompañará toda la vida",
-      category: "Blog",
-      slug: "piel-traje-medida"
+async function getBlogPosts() {
+  try {
+    const response = await fetch('https://dramileidyfdzribot.com/wp-json/wp/v2/posts', { 
+      cache: 'no-store' // Ensures fresh data on each request
+    });
+    
+    if (!response.ok) {
+      throw new Error('Failed to fetch blog posts');
     }
-  ];
+    
+    const posts = await response.json();
+    
+    // Map WordPress posts to our blog post format
+    return posts.map(post => {
+      // Get category name - simplifying for now by using category ID mapping
+      let category = "Blog";
+      if (post.categories.includes(64)) {
+        category = "Dermatología";
+      } else if (post.categories.includes(63)) {
+        category = "Medicina Estética";
+      }
+      
+      return {
+        id: post.id,
+        title: post.title.rendered,
+        category: category,
+        slug: post.slug,
+        excerpt: post.excerpt.rendered,
+        date: new Date(post.date).toLocaleDateString('es-MX', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        })
+      };
+    });
+  } catch (error) {
+    console.error('Error fetching blog posts:', error);
+    return []; // Return empty array in case of error
+  }
+}
+
+export default async function Blog() {
+  const blogPosts = await getBlogPosts();
 
   // Available categories
   const categories = ["Blog", "Dermatología", "Medicina Estética"];
@@ -45,16 +55,15 @@ export default function Blog() {
       <Title_Banner title="Blog" />
       <div className={styles.container}>
         <div className={styles.blogHeader}>
-          <h1>Blog</h1>
           <div className={styles.searchBar}>
             <input type="text" placeholder="Buscar..." className={styles.searchInput} />
             <button className={styles.searchButton}>
-              <span role="img" aria-label="search">🔍</span>
+              <Search />
             </button>
           </div>
         </div>
 
-        <div className={styles.categoriesSection}>
+        {/* <div className={styles.categoriesSection}>
           <h2>Categorías</h2>
           <div className={styles.categoriesList}>
             {categories.map((category, index) => (
@@ -63,18 +72,16 @@ export default function Blog() {
               </Link>
             ))}
           </div>
-        </div>
+        </div> */}
 
         <div className={styles.latestPosts}>
           <h2>Últimas entradas</h2>
           <div className={styles.postsList}>
             {blogPosts.map(post => (
               <div key={post.id} className={styles.postItem}>
-                <span className={styles.diamond}>💎</span>
                 <Link href={`/blog/${post.slug}`}>
                   <span className={styles.postTitle}>{post.title}</span>
                 </Link>
-                <span className={styles.postCategory}>{post.category}</span>
               </div>
             ))}
           </div>
