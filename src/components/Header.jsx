@@ -8,6 +8,7 @@ import styles from './header.module.css';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
   const pathname = usePathname();
   const mobileNavRef = useRef(null);
 
@@ -23,6 +24,23 @@ const Header = () => {
 
   // Determine if we're on the home page
   const isHomePage = pathname === '/';
+
+  // Handle scroll events to make header sticky
+  useEffect(() => {
+    const handleScroll = () => {
+      // Make header sticky after scrolling down 100px
+      setIsSticky(window.scrollY > 100);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    
+    // Initial check in case page is loaded scrolled down
+    handleScroll();
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   // Handle clicks outside the mobile menu
   useEffect(() => {
@@ -40,14 +58,14 @@ const Header = () => {
   }, [isOpen]);
 
   return (
-    <header className={`${styles.header} ${isHomePage ? styles.homeHeader : ''}`}>
+    <header className={`${styles.header} ${isHomePage ? styles.homeHeader : ''} ${isSticky ? styles.sticky : ''}`}>
       <div className={styles.container}>
         <Link href="/" className={styles.logo}>
           <Image
-            src="/logo.png" // Make sure to add your logo to the public folder
+            src="/logo.png"
             alt="Dra. Mileidy Fernandez Ribot"
-            width={186}
-            height={40}
+            width={isSticky ? 140 : 186}
+            height={isSticky ? 30 : 40}
             priority
           />
         </Link>
