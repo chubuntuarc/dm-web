@@ -2,13 +2,14 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import styles from './header.module.css';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
+  const mobileNavRef = useRef(null);
 
   const menuItems = [
     { label: 'Inicio', href: '/' },
@@ -22,6 +23,21 @@ const Header = () => {
 
   // Determine if we're on the home page
   const isHomePage = pathname === '/';
+
+  // Handle clicks outside the mobile menu
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (isOpen && mobileNavRef.current && !mobileNavRef.current.contains(event.target) && 
+          !event.target.closest(`.${styles.mobileMenuButton}`)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isOpen]);
 
   return (
     <header className={`${styles.header} ${isHomePage ? styles.homeHeader : ''}`}>
@@ -86,6 +102,7 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         <div 
+          ref={mobileNavRef}
           className={`${styles.mobileNav} ${isOpen ? styles.isOpen : ''} ${isHomePage ? styles.homeMobileNav : ''}`}
         >
           <nav className={styles.mobileNavInner}>

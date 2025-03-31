@@ -89,11 +89,12 @@
   top: 0;
   right: -100%;
   width: 80%;
-  height: 100vh;
-  background-color: white;
+  height: 60vh;
+  background-color: var(--cream);
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
   transition: right 0.3s ease-in-out;
   z-index: 1000;
+  border-radius: 12px 0 0 12px;
 }
 
 .mobileNav.isOpen {
@@ -101,18 +102,29 @@
 }
 
 .mobileNavInner {
-  padding: 80px 20px 20px;
+  padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
 }
 
 .mobileNavLink {
   font-size: 1.2rem;
-  color: #333;
+  color: var(--gold);
   text-decoration: none;
   padding: 10px 0;
-  border-bottom: 1px solid #eee;
+  border-bottom: none;
+}
+
+.closeButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: var(--gold);
+  cursor: pointer;
 }
 
 .overlay {
