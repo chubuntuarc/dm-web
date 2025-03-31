@@ -10,6 +10,8 @@ import "slick-carousel/slick/slick-theme.css";
 import TextImage from "../../components/TextImage";
 import Chapters from "../../components/Chapters";
 import Arrow from "../../components/arrow";
+import QuoteLeft from "../../components/quote_left";
+import QuoteRight from "../../components/quote_right";
 
 export default function Trayectoria() {
   const [activeTab, setActiveTab] = useState("Trayectoria");
@@ -272,9 +274,9 @@ Coautora de los libros Ser mujer es fascinante, año 2022 y la historia de 100 m
               <div className={styles.writterTextImage}>
                 <TextImage
                   textContent={[
-                    "Puede suceder que ese “personaje” que vamos construyendo no está alineado a lo que pensamos, sentimos, decimos o hacemos, y no nos apoya para lograr el propósito de vida.",
+                    "Puede suceder que ese 'personaje' que vamos construyendo no está alineado a lo que pensamos, sentimos, decimos o hacemos, y no nos apoya para lograr el propósito de vida.",
                     "Tiene mucho que ver con nuestro autoconcepto, autoestima y amor propio.",
-                    "Todas atravesamos desiertos, vicisitudes, sin embargo, a pesar de todos nuestros desaciertos, “hoy es una nueva oportunidad de hacerlo diferente”.",
+                    "Todas atravesamos desiertos, vicisitudes, sin embargo, a pesar de todos nuestros desaciertos, 'hoy es una nueva oportunidad de hacerlo diferente'.",
                     "Y no se trata de, ¿que pase para llegar aquí?, sino de agradecer que estoy aquí. El libro es un viaje o una invitación para construirte.",
                     "Y este viaje lo harás por medio de sus 5 capítulos:",
                   ]}
@@ -297,27 +299,37 @@ Coautora de los libros Ser mujer es fascinante, año 2022 y la historia de 100 m
               </div>
 
               <div className={styles.bookHighlight}>
-                <div className={styles.bookImageContainer}>
-                  <img
-                    src="/dra_path_esc.jpg"
-                    alt="Dra. Mileidy como escritora"
-                  />
-                </div>
-                <div className={styles.bookMessage}>
-                  <h3>El Arte de Pulir un Diamante® nos recuerda:</h3>
-                  <p className={styles.bookQuote}>
-                    Nuestra piel es el traje a la medida que nos acompañará a lo
-                    largo de toda la vida, poner especial énfasis en ella nos
-                    permitirá enviar un mensaje anónimo al mundo, será una
-                    acción que nos apoyará a brillar como el diamante que
-                    siempre hemos sido.
-                  </p>
-                  <p className={styles.bookQuote}>
-                    La obsesión consigo mismo es un callejón sin salida. La
-                    atención en los demás nos orienta a una vida libre y
-                    espaciosa".
-                  </p>
-                  <p className={styles.thankYou}>Muchas gracias.</p>
+                <div className={styles.bookContent}>
+                  <div className={styles.bookImageContainer}>
+                    <img src="/book.png" alt="Dra. Mileidy como escritora" />
+                  </div>
+                  <div className={styles.bookMessage}>
+                    <h3>El Arte de Pulir un Diamante® nos recuerda:</h3>
+                    <div className={styles.diamondIcon}>
+                      <Diamond />
+                    </div>
+                    <div className={styles.bookQuoteContainer}>
+                      <div className={styles.quoteLeft}>
+                        <QuoteLeft />
+                      </div>
+                      <p className={styles.bookQuote}>
+                        Nuestra piel es el traje a la medida que nos acompañará
+                        a lo largo de toda la vida, poner especial énfasis en
+                        ella nos permitirá enviar un mensaje anónimo al mundo y
+                        será una acción que nos apoyará a brillar como el
+                        diamante que siempre hemos sido.
+                      </p>
+                      <p className={styles.bookQuote}>
+                        La obsesión consigo mismo es un callejón sin salida. La
+                        atención en los demás nos orienta a una vida libre y
+                        espaciosa.
+                      </p>
+                      <div className={styles.quoteRight}>
+                        <QuoteRight />
+                      </div>
+                      <p className={styles.thankYou}>Muchas gracias.</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

@@ -353,70 +353,113 @@
 }
 
 .bookConclusion {
-  margin: 2rem 0;
+  background-color: var(--cream);
   text-align: center;
+}
+
+.bookConclusion p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  padding: 1rem;
+  padding-bottom: 0;
+  text-align: left;
 }
 
 .quote {
-  font-size: 1.25rem;
+  font-size: 16px;
   font-style: italic;
-  font-weight: 500;
-  margin: 1rem 0;
-  padding: 0;
+  font-weight: 600;
+  padding: 1rem;
+  padding-top: 8px;
   border: none;
-  text-align: center;
-  max-width: 80%;
-  margin: 1rem auto;
+  text-align: left;
 }
 
 .bookHighlight {
-  display: flex;
-  margin: 3rem 0;
-  background-color: #f9f9f9;
+  margin: 1rem 0;
   border-radius: 8px;
   overflow: hidden;
 }
 
+.bookContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .bookImageContainer {
-  flex: 1;
-  max-width: 40%;
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
 }
 
 .bookImageContainer img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
+  border-radius: 12px;
 }
 
 .bookMessage {
-  flex: 1.5;
-  padding: 2rem;
+  padding: 0 2rem 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   text-align: center;
 }
 
 .bookMessage h3 {
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
   font-weight: 600;
+  color: #333;
+  text-align: center;
+}
+
+.bookMessage .diamondIcon {
+  position: relative;
+  left: auto;
+  top: auto;
+  margin: 0.5rem 0 1.5rem;
+  transform: scale(0.9);
+  background-color: transparent;
+}
+
+.bookQuoteContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} 
+
+.quoteLeft {
+  position: absolute;
+  left: 16px;
+  opacity: 0.3;
+}
+
+.quoteRight {
+  margin-top: 190px;
+  position: absolute;
+  right: 32px;
+  opacity: 0.3;
 }
 
 .bookQuote {
   font-style: italic;
   color: #666;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   line-height: 1.6;
-  font-size: 1.1rem;
+  font-size: 1rem;
+  text-align: center;
 }
 
-
 .thankYou {
-  font-size: 1.3rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
   font-weight: 500;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
 }
 
 .sliderContainer {
