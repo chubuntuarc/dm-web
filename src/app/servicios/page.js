@@ -43,7 +43,7 @@ export default function Servicios() {
             imageAlt="Medicina Estética"
             title="Medicina Estética"
             description="Nuestra misión dentro de la Medicina Estética es ser tu mejor opción de acompañamiento en tu proceso de rejuvenecimiento."
-            linkUrl="/medicina-estetica"
+            linkUrl="/medicina"
             isButton={true}
           />
 
