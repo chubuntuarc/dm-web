@@ -1,5 +1,8 @@
-.container {
+body {
   background: linear-gradient(to bottom, #ffffff, #F5F0E5);
+}
+
+.container {
   color: #000;
   margin: 0 auto;
   padding: 2rem;
