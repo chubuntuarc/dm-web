@@ -81,23 +81,22 @@ export default async function BlogPost({ params }) {
     
     return (
       <div className={styles.container}>
-        <h1 className={styles.title}>{post.title.rendered}</h1>
-        <Image
-          src={post.yoast_head_json.og_image[0].url}
-          alt={post.title.rendered}
-          width={1000}
-          height={1000}
-          className={styles.image}
-        />
-        <p className={styles.excerpt}>{plainTextExcerpt}</p>
-        <div
-          className={styles.content}
-          dangerouslySetInnerHTML={{ __html: replaceSmallImages(post.content.rendered) }}
-        />
-        <p className="mt-4">
-          Estás viendo el post con slug:{" "}
-          <span className="font-bold">{slug}</span>
-        </p>
+        <div className={styles.content}>
+          <h1 className={styles.title}>{post.title.rendered}</h1>
+          <Image
+            src={post.yoast_head_json.og_image[0].url}
+            alt={post.title.rendered}
+            width={1000}
+            height={1000}
+            className={styles.image}
+          />
+          <p className={styles.excerpt}>{plainTextExcerpt}</p>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: replaceSmallImages(post.content.rendered),
+            }}
+          />
+        </div>
       </div>
     );
   } catch (error) {
