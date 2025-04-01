@@ -59,6 +59,33 @@ export default function Medicina() {
             linkText="Ver más"
             linkUrl="/servicios/mesoterapia-con-enzimas"
           />
+
+          <ContentCard
+            imageSrc="/reset_facial.jpg"
+            imageAlt="Reset Facial"
+            title="Reset Facial"
+            description="Técnica de vanguardia para rejuvenecimiento facial sin cirugía."
+            linkText="Ver más"
+            linkUrl="/servicios/reset-facial"
+          />
+
+          <ContentCard
+            imageSrc="/top_model_look.jpg"
+            imageAlt="Top Model Look"
+            title="Top Model Look"
+            description="Técnica de embellecimiento facial para realzar tus rasgos físicos con la aplicación de ácido hialurónico."
+            linkText="Ver más"
+            linkUrl="/servicios/top-model-look"
+          />
+
+          <ContentCard
+            imageSrc="/marcacion.jpg"
+            imageAlt="Marcación Mandibular"
+            title="Marcación Mandibular"
+            description="Técnica utilizada para la definición de la parte inferior de tu rostro mediante la aplicación de ácido hialurónico."
+            linkText="Ver más"
+            linkUrl="/servicios/marcacion-mandibular"
+          />
         </div>
       </div>
     </>

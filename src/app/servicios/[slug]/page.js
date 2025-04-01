@@ -92,10 +92,6 @@ export default async function Servicio({ params }) {
             __html: replaceSmallImages(page.content.rendered),
           }}
         />
-        <p className="mt-4">
-          Estás viendo la pagina con slug:{" "}
-          <span className="font-bold">{slug}</span>
-        </p>
       </div>
     );
   } catch (error) {
