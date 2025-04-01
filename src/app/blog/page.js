@@ -2,6 +2,7 @@ import styles from "./blog.module.css";
 import Title_Banner from "../../components/Title_Banner";
 import Link from "next/link";
 import Search from "../../components/search";
+import Image from "next/image";
 
 async function getBlogPosts() {
   try {
@@ -15,6 +16,11 @@ async function getBlogPosts() {
     
     const posts = await response.json();
     
+    // Function to strip HTML tags
+    const stripHtml = (html) => {
+      return html.replace(/<\/?[^>]+(>|$)/g, "");
+    };
+    
     // Map WordPress posts to our blog post format
     return posts.map(post => {
       // Get category name - simplifying for now by using category ID mapping
@@ -25,12 +31,18 @@ async function getBlogPosts() {
         category = "Medicina Estética";
       }
       
+      // Strip HTML from excerpt
+      const plainTextExcerpt = stripHtml(post.excerpt.rendered);
+      
       return {
         id: post.id,
         title: post.title.rendered,
+        image: post.yoast_head_json.og_image[0].url,
         category: category,
+        description: plainTextExcerpt,
         slug: post.slug,
-        excerpt: post.excerpt.rendered,
+        excerpt: plainTextExcerpt,
+        author: post.yoast_head_json.author,
         date: new Date(post.date).toLocaleDateString('es-MX', {
           year: 'numeric',
           month: 'long',
@@ -56,7 +68,11 @@ export default async function Blog() {
       <div className={styles.container}>
         <div className={styles.blogHeader}>
           <div className={styles.searchBar}>
-            <input type="text" placeholder="Buscar..." className={styles.searchInput} />
+            <input
+              type="text"
+              placeholder="Buscar..."
+              className={styles.searchInput}
+            />
             <button className={styles.searchButton}>
               <Search />
             </button>
@@ -77,10 +93,24 @@ export default async function Blog() {
         <div className={styles.latestPosts}>
           <h2>Últimas entradas</h2>
           <div className={styles.postsList}>
-            {blogPosts.map(post => (
+            {blogPosts.map((post) => (
               <div key={post.id} className={styles.postItem}>
-                <Link href={`/blog/${post.slug}`}>
-                  <span className={styles.postTitle}>{post.title}</span>
+                <Link href={`/blog/${post.slug}`} className={styles.postLink}>
+                  <div className={styles.postImageContainer}>
+                    <Image
+                      src={post.image}
+                      alt={post.title}
+                      width={300}
+                      height={200}
+                      className={styles.postImage}
+                    />
+                  </div>
+                  <div className={styles.postContent}>
+                    <h3 className={styles.postTitle}>{post.title}</h3>
+                    <p className={styles.postDescription}>{post.description}</p>
+                    <p className={styles.postAuthor}>Por la {post.author}</p>
+                    <p className={styles.postDate}>{post.date}</p>
+                  </div>
                 </Link>
               </div>
             ))}
