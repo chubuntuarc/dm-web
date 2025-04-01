@@ -1,0 +1,131 @@
+.container {
+  background: linear-gradient(to top, #ffffff, #F5F0E5);
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.content {
+  width: 100%;
+}
+
+.content h1, .content h2, .content h3 {
+  font-family: "Montserrat", sans-serif;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  line-height: 1.3;
+  font-size: 1rem;
+}
+
+.content h2 {
+  border-bottom: 1px solid #eaeaea;
+  padding-bottom: 0.5rem;
+}
+
+.content p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.content ul, .content ol {
+  margin-bottom: 1.5rem;
+  padding-left: 2rem;
+}
+
+.content li {
+  margin-bottom: 0.5rem;
+}
+
+.content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  margin: 1rem auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  object-fit: contain;
+}
+
+/* Fix for WordPress lazy-loaded images */
+.content figure img.lazyload,
+.content figure img.cmsmasters-lazyload {
+  opacity: 1 !important;
+  transition: none !important;
+  min-height: 300px;
+}
+
+.content figure img[data-src] {
+  opacity: 1;
+  background-image: none !important;
+  background-size: contain;
+}
+
+.content figure figcaption {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.content video {
+  width: 100%;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content a {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+.content a:hover {
+  text-decoration: underline;
+}
+
+.content sup {
+  vertical-align: super;
+  font-size: smaller;
+}
+
+.excerpt {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  margin: 1rem auto;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 16px;
+  margin: 0 auto;
+  display: block;
+}
+
+.title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  .content h2 {
+    font-size: 1rem;
+  }
+  
+  .content h3 {
+    font-size: 1rem;
+  }
+  
+  .content p {
+    font-size: 1rem;
+  }
+}

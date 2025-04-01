@@ -21,7 +21,7 @@ export default function Medicina() {
             title="Harmony Ca"
             description="El mejor estimulante de colágeno del momento con las dos sustancias que tu piel más necesita: ácido hialurónico y su estimulante de colágeno."
             linkText="Ver más"
-            linkHref="#"
+            linkUrl="/servicios/harmony-ca"
           />
 
           <ContentCard
@@ -30,7 +30,7 @@ export default function Medicina() {
             title="Hilos Tensores"
             description="Efecto tensor y lifting inmediato en tu rostro, mejorando la definición y textura de la piel."
             linkText="Ver más"
-            linkHref="#"
+            linkUrl="/servicios/hilos-tensores"
           />
 
           <ContentCard
@@ -39,7 +39,7 @@ export default function Medicina() {
             title="Peeling Cosmelan"
             description="El tratamiento más integral para desvanecimiento de manchas en la piel."
             linkText="Ver más"
-            linkHref="#"
+            linkUrl="/servicios/peeling-cosmelan"
           />
 
           <ContentCard
@@ -48,7 +48,7 @@ export default function Medicina() {
             title="Toxina Botulínica"
             description="El tratamiento de excelencia para prevención y tratamiento de arrugas y líneas de expresión."
             linkText="Ver más"
-            linkHref="#"
+            linkUrl="/servicios/toxina-botulinica"
           />
 
           <ContentCard
@@ -57,7 +57,7 @@ export default function Medicina() {
             title="Mesoterapia Con Enzimas"
             description="El tratamiento más efectivo para disminución de grasa localizada facial o corporal."
             linkText="Ver más"
-            linkHref="#"
+            linkUrl="/servicios/mesoterapia-con-enzimas"
           />
         </div>
       </div>
