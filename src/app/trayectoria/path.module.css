@@ -338,6 +338,26 @@
     top: -14px;
     transform: scale(0.5);
   }
+  
+  .medicalAdditionalContent, .businessAdditionalContent {
+    padding: 1rem;
+  }
+  
+  .quoteLeft, .quoteRight {
+    display: none;
+  }
+  
+  .hideOnDesktop {
+    display: none;
+  }
+  
+  .heroImage img {
+    height: 350px;
+  }
+  
+  .tabTitle {
+    font-size: 22px;
+  }
 }
 
 .chaptersContainer {
@@ -403,6 +423,8 @@
   margin: 1rem 0;
   border-radius: 8px;
   overflow: hidden;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .bookContent {
@@ -533,5 +555,9 @@
 @media (max-width: 768px) {
   .slide {
     height: 500px;
+  }
+
+  .hideOnMobile {
+    display: none;
   }
 }
