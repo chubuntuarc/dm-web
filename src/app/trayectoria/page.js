@@ -101,9 +101,6 @@ Coautora de los libros Ser mujer es fascinante, año 2022 y la historia de 100 m
             <img src={activeImage} alt="Dra. Mileidy" />
           </div>
           <div className={styles.heroContent}>
-            <h1 className={styles.mainTitle}>
-              El crecimiento de una mujer visionaria.
-            </h1>
             <div className={styles.tabsContainer}>
               <div className={styles.tabsHeader}>
                 {tabsData.map((tab) => (
@@ -137,6 +134,9 @@ Coautora de los libros Ser mujer es fascinante, año 2022 y la historia de 100 m
               activeTab === tab.id && (
                 <div key={tab.id} className={styles.contentWrapper}>
                   <div className={styles.textContainer}>
+                    <h1 className={styles.mainTitle}>
+                      {tab.heading}
+                    </h1>
                     <p className={styles.contentDescription}>
                       {tab.description}
                     </p>

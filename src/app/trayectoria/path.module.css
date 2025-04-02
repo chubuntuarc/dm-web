@@ -4,6 +4,8 @@
   align-items: center;
   gap: 1rem;
   padding: 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .heroImage {
@@ -26,11 +28,10 @@
 
 .mainTitle {
   font-family: "Montserrat Italic", sans-serif;
-  font-size: 15px;
+  font-size: 1.2rem;
   color: #000;
   margin-bottom: 1rem;
-  font-weight: 400;
-  text-align: center;
+  font-weight: 600;
 }
 
 .tabsHeader {
@@ -95,6 +96,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .contentWrapper {
@@ -154,12 +157,16 @@
   flex-direction: column;
   align-items: center;
   padding: 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .pathAdditionalContent img {
   border-radius: 8px;
   width: calc(100vw - 2rem);
   height: auto;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .businessAdditionalContent {
@@ -313,6 +320,23 @@
     width: 70px;
     height: 70px;
     transform: scale(0.6);
+  }
+}
+
+@media (min-width: 768px) {
+  .careerSteps {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .careerStep {
+    margin-bottom: 0;
+  }
+  
+  .diamondIcon {
+    left: -34px;
+    top: -14px;
+    transform: scale(0.5);
   }
 }
 
@@ -470,6 +494,8 @@
 
 .customSlider {
   width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .slide {
