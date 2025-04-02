@@ -16,6 +16,10 @@
     flex-direction: row;
     align-items: flex-start;
   }
+  
+  .heroMobile {
+    display: none;
+  }
 }
 
 .heroContent {
@@ -94,21 +98,91 @@
   margin: 0;
 }
 
-/* Form Section */
-.formSection {
+/* Form Container and Layout */
+.formContainer {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  background-color: #ffffff;
-  border-radius: 8px;
-  overflow: hidden;
+  margin: 2rem 0;
+}
+
+.formHeader {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  order: 2; /* Display after the image on mobile */
+}
+
+.formHeader h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.formHeader p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  order: 3; /* Display after the header on mobile */
+}
+
+.imageSection {
+  order: 1; /* Display at the top on mobile */
+  margin-bottom: 1rem;
+  /* Make sure it's not hidden somehow */
+  display: block;
+  width: 100%;
 }
 
 @media (min-width: 768px) {
-  .formSection {
-    flex-direction: row;
-    min-height: 500px;
+  .formContainer {
+    /* Reset ordering for desktop */
+    display: flex;
+    flex-direction: column;
   }
+  
+  .formHeader {
+    order: 1; /* Display at the top on desktop */
+  }
+  
+  .contentWrapper {
+    flex-direction: row;
+    align-items: stretch;
+    order: 2; /* Display after header on desktop */
+  }
+  
+  .imageSection {
+    order: 2; /* Move to right side on desktop */
+    flex: 2; /* Takes less space than the form */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+  }
+  
+  .formSection {
+    flex: 3; /* Takes more space than the image */
+    order: 1; /* Move to left side on desktop */
+  }
+}
+
+.contactImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  max-height: 500px;
+}
+
+/* Form Section */
+.formSection {
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .formContent {
@@ -159,7 +233,7 @@
 
 .formGroup textarea {
   resize: vertical;
-  min-height: 120px;
+  height: 52px;
 }
 
 .submitButton {
@@ -206,4 +280,163 @@
   .formContent {
     padding: 2rem 1.5rem;
   }
+}
+
+/* Service Card and Form Layout */
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .contentWrapper {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  
+  .serviceCard {
+    flex: 1;
+    order: 2;
+  }
+}
+
+/* Service Card Styling */
+.serviceCard {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.heroMobile {
+  display: block; /* Shown by default (mobile) */
+}
+
+.heroDesktop {
+  display: none; /* Hidden by default (mobile) */
+}
+
+@media (min-width: 768px) {
+  .heroMobile {
+    display: none; /* Hide on desktop */
+  }
+  
+  .heroDesktop {
+    display: block; /* Show on desktop */
+  }
+}
+
+/* Desktop Hero Section */
+.heroDesktop {
+  width: 100%;
+}
+
+.heroLayout {
+  background: linear-gradient(to bottom, #ffffff, #F5F0E5);
+  display: flex;
+  flex-direction: row;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.imageContainer {
+  flex: 1;
+  max-height: 600px;
+  overflow: hidden;
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.heroInfo {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.heroTitle {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+  font-style: italic;
+}
+
+.heroDescription {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  margin: 0;
+}
+
+.scheduleButton {
+  align-self: flex-start;
+  background-color: var(--dark-cream);
+  color: #333;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.scheduleButton:hover {
+  background-color: #d9c78c;
+}
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.contactItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  transform: scale(0.8);
+}
+
+.contactText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.contactText h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+  color: #333;
+}
+
+.contactText p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0;
+}
+
+.icon {
+  color: #333;
+  font-size: 1.5rem;
+  min-width: 24px;
 }
