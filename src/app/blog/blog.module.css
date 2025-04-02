@@ -78,8 +78,8 @@
 }
 
 .postsList {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 2rem;
   margin-top: 2rem;
 }
@@ -191,6 +191,15 @@
     font-size: 12px;
     margin-bottom: 0.75rem;
     -webkit-line-clamp: 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .postsList {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
   }
 }
 
