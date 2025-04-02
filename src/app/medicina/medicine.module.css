@@ -10,9 +10,11 @@
   font-family: "Montserrat", sans-serif;
   text-align: left;
   font-weight: normal;
-  margin-bottom: 3rem;
   font-size: 1rem;
   padding: 0 2rem;
+  max-width: 1000px;
+  text-align: center;
+  margin: 0 auto 3rem auto;
 }
 
 .introText {
@@ -57,6 +59,14 @@
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 2rem;
   margin-top: 3rem;
+}
+
+@media (min-width: 992px) {
+  .treatmentsGrid {
+    grid-template-columns: repeat(2, 500px);
+    max-width: 1000px;
+    margin: 0 auto;
+  }
 }
 
 .treatmentCard {
