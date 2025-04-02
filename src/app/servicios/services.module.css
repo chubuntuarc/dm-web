@@ -3,6 +3,7 @@
   color: #000;
   margin: 0 auto;
   padding: 2rem 1rem;
+  max-width: 1200px;
 }
 
 .servicesHeading {
@@ -115,6 +116,15 @@
   width: 100%;
   max-width: 800px;
   position: relative;
+}
+
+@media (min-width: 486px) {
+  .servicesHeading {
+    display: none;
+  }
+  .servicesIntro {
+    margin-top: 0;
+  }
 }
 
 .quoteContainer {
