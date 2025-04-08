@@ -20,7 +20,12 @@ export default function Home() {
         <link rel="dns-prefetch" href="https://i.ytimg.com" />
       </Head>
       <main className={styles.main}>
-        <MainSection />
+        <div className={styles.mobileHeader}>
+          <MainSection size="mobile" />
+        </div>
+        <div className={styles.desktopHeader}>
+          <MainSection size="desktop" />
+        </div>
         <div className={styles.quoteSection}>
           <div className={styles.quoteContainer}>
             <div className={styles.diamondIcon}>

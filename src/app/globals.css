@@ -6,6 +6,7 @@
   --light-cream: #F0D9BA;
   --dark-cream: #F0D3AE;
   --black: #000000;
+  --title-gold: #D8992A;
 }
 
 @media (prefers-color-scheme: dark) {
