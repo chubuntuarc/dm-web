@@ -8,6 +8,8 @@ import MainSection from "../components/MainSection";
 import QuoteLeft from '../components/quote_left';
 import QuoteRight from '../components/quote_right';
 import Link from "next/link";
+import WhatsAppButton from "../components/WhatsAppButton";
+
 export default function Home() {
   return (
     <div className={styles.page}>
@@ -26,7 +28,7 @@ export default function Home() {
         <div className={styles.desktopHeader}>
           <MainSection size="desktop" />
         </div>
-        <div className={styles.quoteSection}>
+        <div className={styles.quoteSection + " " + styles.hideDesktop}>
           <div className={styles.quoteContainer}>
             <div className={styles.diamondIcon}>
               <Diamond />
@@ -137,6 +139,7 @@ export default function Home() {
           </div>
         </div>
       </main>
+      <WhatsAppButton phoneNumber="YOUR_PHONE_NUMBER_HERE" />
     </div>
   );
 }

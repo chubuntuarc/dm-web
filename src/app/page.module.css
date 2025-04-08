@@ -537,4 +537,8 @@ a.secondary {
   .carrerImage {
     width: 350px;
   }
+  
+  .hideDesktop {
+    display: none;
+  }
 }
