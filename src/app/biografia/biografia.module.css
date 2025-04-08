@@ -282,6 +282,7 @@
   left: 70px;
   background-color: #333;
   border-radius: 50%;
+  top: 6px;
   z-index: 1;
 }
 

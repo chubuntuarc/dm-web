@@ -148,7 +148,7 @@ export default function Contacto() {
           <div className={styles.contentWrapper}>
             <div className={styles.formSection}>
               <div className={styles.formHeader}>
-                <h2>Dejanos un mensaje</h2>
+                <h2>Déjanos un mensaje</h2>
                 <p>
                   Tu opinión es lo más valioso. Déjanos saber tus inquietudes y
                   en seguida nuestro equipo se pondrá en contacto directo
