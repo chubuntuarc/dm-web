@@ -8,7 +8,6 @@ import MainSection from "../components/MainSection";
 import QuoteLeft from '../components/quote_left';
 import QuoteRight from '../components/quote_right';
 import Link from "next/link";
-import WhatsAppButton from "../components/WhatsAppButton";
 
 export default function Home() {
   return (
@@ -139,7 +138,6 @@ export default function Home() {
           </div>
         </div>
       </main>
-      <WhatsAppButton phoneNumber="YOUR_PHONE_NUMBER_HERE" />
     </div>
   );
 }

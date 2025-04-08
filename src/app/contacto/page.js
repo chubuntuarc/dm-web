@@ -1,12 +1,29 @@
+"use client";
+
+import { useState } from "react";
 import styles from "./contact.module.css";
 import Title_Banner from "../../components/Title_Banner";
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaClock } from 'react-icons/fa';
 import ContentCard from "../../components/ContentCard";
 import Mail from "../../components/mail";
 import Phone from "../../components/phone";
 import Address from "../../components/address";
 import Alarm from "../../components/alarm";
+
 export default function Contacto() {
+  const [nombre, setNombre] = useState("");
+  const [correo, setCorreo] = useState("");
+  const [telefono, setTelefono] = useState("");
+  const [mensaje, setMensaje] = useState("");
+
+  const handleWhatsAppSubmit = () => {
+    const recipientPhone = "5216642866427";
+    const message = `Hola, mi nombre es ${nombre}. Mi correo es ${correo} y mi teléfono es ${telefono}. Mensaje: ${mensaje}`;
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `https://api.whatsapp.com/send/?phone=${recipientPhone}&text=${encodedMessage}&type=phone_number&app_absent=0`;
+
+    window.open(whatsappUrl, "_blank");
+  };
+
   return (
     <div>
       <Title_Banner title="Contacto" />
@@ -156,26 +173,47 @@ export default function Contacto() {
                 </p>
               </div>
               <div className={styles.formContent}>
-                <form className={styles.contactForm}>
+                <div className={styles.contactForm}>
                   <div className={styles.formGroup}>
                     <label htmlFor="nombre">
                       Nombre <span style={{ color: "red" }}>*</span>
                     </label>
-                    <input type="text" id="nombre" name="nombre" required />
+                    <input
+                      type="text"
+                      id="nombre"
+                      name="nombre"
+                      required
+                      value={nombre}
+                      onChange={(e) => setNombre(e.target.value)}
+                    />
                   </div>
 
                   <div className={styles.formGroup}>
                     <label htmlFor="correo">
                       Correo <span style={{ color: "red" }}>*</span>
                     </label>
-                    <input type="email" id="correo" name="correo" required />
+                    <input
+                      type="email"
+                      id="correo"
+                      name="correo"
+                      required
+                      value={correo}
+                      onChange={(e) => setCorreo(e.target.value)}
+                    />
                   </div>
 
                   <div className={styles.formGroup}>
                     <label htmlFor="telefono">
                       Teléfono <span style={{ color: "red" }}>*</span>
                     </label>
-                    <input type="tel" id="telefono" name="telefono" required />
+                    <input
+                      type="tel"
+                      id="telefono"
+                      name="telefono"
+                      required
+                      value={telefono}
+                      onChange={(e) => setTelefono(e.target.value)}
+                    />
                   </div>
 
                   <div className={styles.formGroup}>
@@ -187,13 +225,19 @@ export default function Contacto() {
                       name="mensaje"
                       rows="5"
                       required
+                      value={mensaje}
+                      onChange={(e) => setMensaje(e.target.value)}
                     ></textarea>
                   </div>
 
-                  <button type="submit" className={styles.submitButton}>
-                    Enviar
+                  <button
+                    type="button"
+                    className={styles.submitButton}
+                    onClick={handleWhatsAppSubmit}
+                  >
+                    Enviar por WhatsApp
                   </button>
-                </form>
+                </div>
               </div>
             </div>
 
