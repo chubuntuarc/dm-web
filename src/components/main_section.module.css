@@ -147,6 +147,7 @@
   padding: 4rem 2rem;
   background-color: linear-gradient(to bottom, #ffffff, #F5F0E5);
   gap: 4rem;
+  width: 100vw;
 }
 
 .leftColumn {
@@ -227,6 +228,7 @@
 }
 
 .imageContainer {
+  max-height: 600px;
   position: relative;
   width: 100%;
   aspect-ratio: 3 / 4;
