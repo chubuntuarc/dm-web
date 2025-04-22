@@ -27,7 +27,6 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
   z-index: 1;
 }
 
@@ -119,15 +118,18 @@
   }
   
   .headerContent {
+    border-radius: 0;
+    background-color: rgb(234 190 120 / 29%);
     margin-top: auto;
-    padding: 2rem 1rem 0;
   }
   
   .title, .titleBold {
+    color: #000;
     font-size: 2rem;
   }
   
   .subtitle {
+    color: #000;
     font-size: 0.8rem;
     margin: 1rem 0 2rem;
   }

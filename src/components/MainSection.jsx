@@ -13,7 +13,7 @@ export default function MainSection({ size }) {
           <div className={styles.headerBackground}>
             <Image
               className={styles.profileImage}
-              src="/dra_escritora.jpg"
+              src="/dra_main.png"
               alt="Dra. Mileidy Fernández Ribot"
               priority
               fill
@@ -77,7 +77,7 @@ export default function MainSection({ size }) {
             <div className={styles.imageContainer}>
               <Image
                 className={styles.profileImageDesktop}
-                src="/dra_escritora.jpg"
+                src="/dra_main.png"
                 alt="Dra. Mileidy Fernández Ribot"
                 priority
                 fill

@@ -71,7 +71,7 @@ export default function Home() {
           </p>
 
           <div className={styles.servicesList}>
-            <div className={styles.servicesContent}>
+            <div className={styles.serviceItemContainer}>
               <div className={styles.serviceItem}>
                 <h3>
                   <span>
@@ -88,7 +88,17 @@ export default function Home() {
                   Conocer más
                 </Link>
               </div>
+              <div className={styles.serviceLogo}>
+                <Image
+                  src="/imagenart.png"
+                  alt="Imagenart Medicina Estética Logo"
+                  width={250}
+                  height={100}
+                />
+              </div>
+            </div>
 
+            <div className={styles.serviceItemContainer}>
               <div className={styles.serviceItem}>
                 <h3>
                   <span>
@@ -104,14 +114,14 @@ export default function Home() {
                   Conocer más
                 </Link>
               </div>
-            </div>
-            <div className={styles.serviceImage}>
-              <Image
-                src="/services.jpg"
-                alt="Servicios de medicina estética"
-                width={300}
-                height={380}
-              />
+              <div className={styles.serviceLogo}>
+                <Image
+                  src="/farmacia-campestre.png"
+                  alt="Farmacia Campestre Logo"
+                  width={250}
+                  height={100}
+                />
+              </div>
             </div>
           </div>
         </div>
