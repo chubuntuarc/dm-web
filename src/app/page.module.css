@@ -348,8 +348,7 @@ a.secondary {
 }
 
 .serviceImage img {
-  width: 100%;
-  height: auto;
+  max-height: 200px;
   border-radius: 8px;
   object-fit: cover;
 }
@@ -363,9 +362,13 @@ a.secondary {
 }
 
 .serviceItem {
-  padding: 1.5rem;
   border-radius: 8px;
+  padding: 1.5rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.serviceItem p {
+  height: 80px;
 }
 
 .serviceItem:hover {
@@ -452,6 +455,7 @@ a.secondary {
   }
   
   .serviceImage {
+    max-height: 220px;
     margin-bottom: 2rem;
     max-width: 100%;
   }

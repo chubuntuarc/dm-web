@@ -138,3 +138,58 @@
     font-size: 1rem;
   }
 }
+
+/* Estilos para el botón flotante de WhatsApp */
+.whatsappButton {
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: #f0d3ae;
+  color: #000;
+  padding: 15px 0;
+  border-radius: 0;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-align: center;
+}
+
+.whatsappButton svg {
+  margin-left: 6px;
+  position: relative;
+  top: 4px;
+}
+
+.whatsappButton:hover {
+  background-color: #e6c69a;
+}
+
+@media (max-width: 600px) {
+  .whatsappButton {
+    padding: 12px 0;
+    font-size: 1rem;
+  }
+}
+
+.backButton {
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  padding: 8px 15px;  
+  background-color: #f5f0e5;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+}

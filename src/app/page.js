@@ -84,17 +84,17 @@ export default function Home() {
                   experiencia, que dignifican la práctica de la Medicina
                   Estética alineando el Ser al Parecer.
                 </p>
+                <div className={styles.serviceImage}>
+                  <Image
+                    src="/imagenart.png"
+                    alt="Imagenart Medicina Estética Logo"
+                    width={200}
+                    height={100}
+                  />
+                </div>
                 <Link href="/medicina" className={styles.serviceButton}>
                   Conocer más
                 </Link>
-              </div>
-              <div className={styles.serviceLogo}>
-                <Image
-                  src="/imagenart.png"
-                  alt="Imagenart Medicina Estética Logo"
-                  width={250}
-                  height={100}
-                />
               </div>
             </div>
 
@@ -110,17 +110,17 @@ export default function Home() {
                   Soluciones integrales de productos top en el mercado para el
                   manejo, cuidado y protección de la piel.
                 </p>
+                <div className={styles.serviceImage}>
+                  <Image
+                    src="/farmacia-campestre.png"
+                    alt="Farmacia Campestre Logo"
+                    width={320}
+                    height={100}
+                  />
+                </div>
                 <Link href="/dermatologia" className={styles.serviceButton}>
                   Conocer más
                 </Link>
-              </div>
-              <div className={styles.serviceLogo}>
-                <Image
-                  src="/farmacia-campestre.png"
-                  alt="Farmacia Campestre Logo"
-                  width={250}
-                  height={100}
-                />
               </div>
             </div>
           </div>
@@ -140,12 +140,19 @@ export default function Home() {
           </Link>
           <div className={styles.carrerImage}>
             <Image
-              src="/inicio-trayectoria.jpg"
+              src="/dra_path_esc.jpg"
               alt="Dra. Mileidy Fernández Ribot"
               width={300}
               height={450}
             />
           </div>
+          <Link
+            href="https://www.amazon.com.mx/ARTE-PULIR-DIAMANTE-Emprendedor-rendimiento/dp/B09KF4F9Y5"
+            target="_blank"
+            className={styles.carrerButton}
+          >
+            Comprar el libro
+          </Link>
         </div>
       </main>
     </div>
