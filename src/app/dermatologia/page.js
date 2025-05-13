@@ -29,7 +29,11 @@ export default function Dermatologia() {
   ];
   return (
     <>
-      <Title_Banner title="Dermatológica Campestre" />
+      <div className={styles.pageTitleContainer}>
+        <Title_Banner
+          title="Dermatológica Campestre"
+        />
+      </div>
 
       <div className={styles.introContainer}>
         <p className={styles.introText}>
@@ -63,24 +67,26 @@ export default function Dermatologia() {
             apoyo y acompañamiento o asesoría durante el tiempo que se usa en
             los mismos.
           </p>
+        </div>
+      </div>
 
-          <h2 className={styles.subSectionTitle}>Nuestros Valores</h2>
-          <div className={styles.valuesWrapper}>
-            <div className={styles.valueItem}>
-              <Diamond /> <span>Compromiso</span>
-            </div>
-            <div className={styles.valueItem}>
-              <Diamond /> <span>Disciplina</span>
-            </div>
-            <div className={styles.valueItem}>
-              <Diamond /> <span>Excelencia</span>
-            </div>
-            <div className={styles.valueItem}>
-              <Diamond /> <span>Armonía</span>
-            </div>
-            <div className={styles.valueItem}>
-              <Diamond /> <span>Ética</span>
-            </div>
+      <div className={styles.valuesSection}>
+        <h2 className={styles.subSectionTitle}>Nuestros Valores</h2>
+        <div className={styles.valuesWrapper}>
+          <div className={styles.valueItem}>
+            <Diamond /> <span>Compromiso</span>
+          </div>
+          <div className={styles.valueItem}>
+            <Diamond /> <span>Disciplina</span>
+          </div>
+          <div className={styles.valueItem}>
+            <Diamond /> <span>Excelencia</span>
+          </div>
+          <div className={styles.valueItem}>
+            <Diamond /> <span>Armonía</span>
+          </div>
+          <div className={styles.valueItem}>
+            <Diamond /> <span>Ética</span>
           </div>
         </div>
       </div>
