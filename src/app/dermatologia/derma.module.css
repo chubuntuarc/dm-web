@@ -6,23 +6,47 @@
   padding: 2rem 1rem 0 1rem;
 }
 
-.introText {
-  font-family: "Montserrat", sans-serif;
-  font-size: 1rem;
+.titleBannerContainer {
+  background-color: var(--cream);
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
   text-align: center;
-  color: #333;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
-/* Values section styles */
+.pageTitle {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #000;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.pageTitle svg {
+  width: 24px;
+  height: 24px;
+  fill: #333;
+}
+
+.introText {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  text-align: center;
+  color: #555;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+}
+
 .valuesContainer {
-  background-color: var(--cream);
   display: flex;
   flex-direction: column;
-  margin: 1rem 0;
-  padding: 1rem;
+  padding: 1rem 0;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -33,23 +57,25 @@
   font-weight: 600;
   margin-bottom: 1rem;
   color: #000;
+  text-align: center;
 }
 
 .valuesWrapper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 20px;
+}
+
+.valueItem svg {
+  transform: scale(0.7);
+  color: #333;
 }
 
 .valueItem {
   display: flex;
   align-items: center;
-  gap: 5px;
-}
-
-.valueItem svg {
-  transform: scale(0.7);
+  gap: 0.5rem;
 }
 
 .valueItem span {
@@ -73,69 +99,75 @@
   gap: 2rem;
 }
 
-.valueItem {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
 .valueIcon {
   color: #d4af37;
 }
 
-/* About us section */
 .aboutContainer {
+  display: flex;
+  gap: 2.5rem;
+  align-items: flex-start;
   background-color: #fff;
   color: #000;
   padding: 2rem 1rem;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 auto 2rem auto;
 }
 
 .imageContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 1.5rem;
+  flex-basis: 40%;
+  margin-bottom: 0;
   margin-top: 0;
-  height: 350px;
 }
 
 .imageContainer img {
   object-fit: cover;
   width: 100%;
-  height: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
 .aboutImage {
   display: block;
   max-width: 100%;
+  height: auto;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .aboutContent {
-  width: 100%;
+  flex-basis: 60%;
+  width: auto;
 }
 
 .aboutContainer h2 {
   font-family: "Montserrat", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: bold;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   color: #000;
 }
 
 .aboutContainer p {
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.subSectionTitle {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #000;
 }
 
 .aboutTitle {
   font-family: "Montserrat", sans-serif;
   font-size: 1.5rem;
   font-weight: bold;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   color: #000;
 }
 
@@ -143,11 +175,10 @@
   font-family: "Montserrat", sans-serif;
   color: #333;
   line-height: 1.6;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   font-size: 1rem;
 }
 
-/* Remove or simplify unused styles */
 .quoteContainer,
 .quote,
 .highlight,
@@ -223,18 +254,33 @@
   background-color: #f0dca8;
 }
 
-/* Mission and Vision Section */
 .misionVisionContainer {
   display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 1rem;
+  gap: 2rem;
+  padding: 2rem;
   background-color: var(--cream);
+  max-width: 1200px;
+  margin: 2rem auto;
+  border-radius: 10px;
+  align-items: flex-start;
 }
 
 .misionContainer, .visionContainer {
   flex: 1;
-  border-radius: 8px;
+}
+
+.misionContainer {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.misionIconLarge {
+  width: 40px;
+  height: 40px;
+  fill: #333;
+  flex-shrink: 0;
+  margin-top: 0.25rem;
 }
 
 .iconContainer {
@@ -243,43 +289,49 @@
 
 .misionContainer h2, .visionContainer h2 {
   font-family: "Montserrat", sans-serif;
-  color: #333;
+  color: #000;
   margin-bottom: 1rem;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .misionContainer p, .visionContainer p {
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
-  color: #555;
+  color: #333;
   line-height: 1.6;
 }
 
-/* Kits Section */
 .kitsContainer {
-  padding: 1rem;
+  padding: 2rem 1rem;
   background-color: #fff;
+  max-width: 1200px;
+  margin: 2rem auto;
 }
 
 .kitsButton {
-  background-color: var(--dark-cream);
-  color: #333;
-  border: none;
-  padding: 10px 30px;
-  border-radius: 12px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
-  
-  /* Floating button properties */
+  align-items: center;
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 100;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: #ff8e57;
+  color: #000;
+  padding: 15px 0;
+  border-radius: 0;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-align: center;
+  border: none;
 }
 
-/* Class to hide the button when footer is visible */
 .kitsButtonHidden {
   opacity: 0;
   visibility: hidden;
@@ -288,36 +340,50 @@
 
 .kitsButton:hover {
   background-color: var(--dark-cream);
-  transform: translateY(-2px);
+}
+
+.kitsLayoutContainer {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 3rem;
 }
 
 .kitsIntro {
-  text-align: center;
-  max-width: 800px;
+  text-align: left;
+  flex-basis: 55%;
 }
 
 .kitsIntro h2 {
-  font-family: "Montserrat Italic", sans-serif;
-  color: #333;
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
-  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  font-style: italic;
+  color: #000;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
 }
 
 .kitsIntro p {
   font-family: "Montserrat", sans-serif;
-  color: #555;
+  color: #333;
   line-height: 1.6;
   margin-bottom: 1rem;
   font-size: 1rem;
 }
 
+.kitsImageContainer {
+  flex-basis: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .kitsIntroImage {
   width: 100%;
-  height: 100%;
+  max-width: 400px;
+  height: auto;
   object-fit: cover;
   border-radius: 8px;
-  margin-bottom: 1rem;
 }
 
 .kitsGallery {
@@ -357,7 +423,6 @@
   margin: 0 auto;
 }
 
-/* Responsive styles */
 @media (max-width: 768px) {
   .misionVisionContainer {
     flex-direction: column;

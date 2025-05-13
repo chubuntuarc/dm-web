@@ -19,13 +19,15 @@ const ContentCard = ({
     <div className={styles.serviceCard}>
       {showImage && (
         <div className={styles.serviceImageContainer}>
-          <Image
-            src={imageSrc}
-            alt={imageAlt}
-            width={400}
-            height={300}
-            className={styles.serviceImage}
-          />
+          <a href={linkUrl} className={styles.serviceLink}>
+            <Image
+              src={imageSrc}
+              alt={imageAlt}
+              width={400}
+              height={300}
+              className={styles.serviceImage}
+            />
+          </a>
         </div>
       )}
       <div className={styles.serviceDiamond}>

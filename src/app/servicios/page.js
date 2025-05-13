@@ -38,8 +38,8 @@ export default function Servicios() {
         </div>
 
         <div className={styles.servicesGrid}>
-          <ContentCard 
-            imageSrc="/harmony_medical.jpg"
+          <ContentCard
+            imageSrc="/imagenart.png"
             imageAlt="Medicina Estética"
             title="Medicina Estética"
             description="Nuestra misión dentro de la Medicina Estética es ser tu mejor opción de acompañamiento en tu proceso de rejuvenecimiento."
@@ -47,8 +47,8 @@ export default function Servicios() {
             isButton={true}
           />
 
-          <ContentCard 
-            imageSrc="/derma.png"
+          <ContentCard
+            imageSrc="/farmacia-campestre.png"
             imageAlt="Dermatológica Campestre"
             title="Dermatológica Campestre"
             description="Productos dermatológicos con más de 20 años de probada eficacia en el mercado brindando así a nuestros clientes kits personalizados de skin care."
