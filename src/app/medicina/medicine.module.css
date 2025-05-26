@@ -138,8 +138,8 @@
   left: 0;
   right: 0;
   width: 100%;
-  background-color: #ff8e57;
-  color: #000;
+  background-color: #000;
+  color: #fff;
   padding: 15px 0;
   border-radius: 0;
   text-decoration: none;
@@ -160,7 +160,12 @@
 }
 
 .whatsappButton:hover {
-  background-color: #e6c69a;
+  background-color: #fff4e7;
+  color: #000;
+}
+
+.whatsappButton:hover svg {
+  fill: #000;
 }
 
 @media (max-width: 600px) {

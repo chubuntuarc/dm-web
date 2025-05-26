@@ -28,7 +28,7 @@ export default function Biografia() {
           <div className={styles.bioCards}>
             <div className={styles.bioCard}>
               <div className={styles.bioCardImage}>
-                <img src="/dra_med.jpg" alt="Dra. Mileidy como médico" />
+                <img src="/dra_med.webp" alt="Dra. Mileidy como médico" />
               </div>
               <h2 className={styles.bioCardTitle}>Médico</h2>
             </div>
@@ -36,7 +36,7 @@ export default function Biografia() {
             <div className={styles.bioCard}>
               <div className={styles.bioCardImage}>
                 <img
-                  src="/dra_empresaria.jpg"
+                  src="/dra_empresaria.jpeg"
                   alt="Dra. Mileidy como empresaria"
                 />
               </div>
@@ -46,7 +46,7 @@ export default function Biografia() {
             <div className={styles.bioCard}>
               <div className={styles.bioCardImage}>
                 <img
-                  src="/dra_escritora.jpg"
+                  src="/dra_escritoria.jpg"
                   alt="Dra. Mileidy como escritora"
                 />
               </div>

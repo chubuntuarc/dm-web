@@ -10,6 +10,7 @@ import QuoteRight from '../components/quote_right';
 import Link from "next/link";
 
 export default function Home() {
+  const whatsappLink = `https://api.whatsapp.com/send/?phone=5216642866427&text=%C2%A1Quiero+comprar+el+libro%21&type=phone_number&app_absent=0`;
   return (
     <div className={styles.page}>
       <Head>
@@ -147,7 +148,7 @@ export default function Home() {
             />
           </div>
           <Link
-            href="https://www.amazon.com.mx/ARTE-PULIR-DIAMANTE-Emprendedor-rendimiento/dp/B09KF4F9Y5"
+            href={whatsappLink}
             target="_blank"
             className={styles.carrerButton}
           >
